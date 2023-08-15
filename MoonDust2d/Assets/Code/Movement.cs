@@ -57,6 +57,11 @@ public class Movement : MonoBehaviour
             spriteRenderer.flipX = true;
             animator.SetBool("Moving", true);
         }
+        //Check if the Any key is pressed to change the animation back to idle
+        else if (Input.GetKey(KeyCode.A) == false)
+        {
+            animator.SetBool("Moving", false);
+        }
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * Time.deltaTime * _Speed);
