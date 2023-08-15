@@ -222,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28214416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.782, y: -0.986, z: 0}
+  m_LocalPosition: {x: -3.99, y: 2.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -328,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178712201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.23, y: 2.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -522,7 +522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832307234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.96, y: 1.55, z: 0}
+  m_LocalPosition: {x: -2.23, y: -1.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -572,6 +572,7 @@ MonoBehaviour:
   _Speed: 15
   _JumpForce: 40
   spriteRenderer: {fileID: 832307235}
+  animator: {fileID: 832307241}
 --- !u!61 &832307240
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -627,7 +628,7 @@ Animator:
   m_GameObject: {fileID: 832307234}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1e3e54fe2fc446748a1d7968cab4bf76, type: 2}
+  m_Controller: {fileID: 9100000, guid: 42190ddf61dc858428bb2737b235fd89, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -785,7 +786,7 @@ GameObject:
   - component: {fileID: 1159885290}
   - component: {fileID: 1159885289}
   - component: {fileID: 1159885288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform
   m_TagString: Platform
   m_Icon: {fileID: 0}
