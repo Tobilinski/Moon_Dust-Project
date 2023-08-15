@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public float _Speed = 7.0f;
     public float _JumpForce = 10.0f;
     private bool triggered;
+    public SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +22,13 @@ public class Movement : MonoBehaviour
         if(Input.GetKey(KeyCode.A)) {
             
             transform.Translate(Vector3.left * Time.deltaTime * _Speed);
+            spriteRenderer.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * Time.deltaTime * _Speed);
+            spriteRenderer.flipX = false;
         }
         if (Input.GetKeyDown(KeyCode.Space) && triggered)
         {
