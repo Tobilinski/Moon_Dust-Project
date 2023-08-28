@@ -1,7 +1,7 @@
 // Date Created: 28/08/2023
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
-
+using Pathfinding;
 public class Movement : MonoBehaviour
 {
     //physics variables
