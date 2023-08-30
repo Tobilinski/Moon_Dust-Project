@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(_nextAttackTime);
+        //print(_nextAttackTime);
         //Movement of the player
         Move(); 
         attack();
@@ -91,7 +91,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && triggered)
         {
             rb.velocity = Vector2.up * _JumpForce;
-            print("Jump");
+            //print("Jump");
         }
     }
     void attack()
@@ -102,7 +102,7 @@ public class Movement : MonoBehaviour
             {
                 _nextAttackTime = Time.time + 1f / _attackRate;
                 attackWeapon.SetActive(true);
-                print("Attack");
+                //print("Attack");
             }
             else
             {

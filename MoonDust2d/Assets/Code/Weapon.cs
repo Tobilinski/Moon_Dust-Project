@@ -5,23 +5,26 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-   public EnemyScript enemyScript;
-   public EnemyScript2 enemyScript2;
+   //public EnemyScript enemyScript;
+  
    private void OnTriggerEnter2D(Collider2D other)
    {
       if (other.gameObject.tag == "Enemy1")
       {
-         enemyScript.EnemyHealth -= 10f;
-         Debug.Log(enemyScript.EnemyHealth + "Enemy Health");
+         //enemyScript.EnemyHealth -= 10f;
+         //Debug.Log(enemyScript.EnemyHealth + "Enemy Health");
          
       }
-      if (other.gameObject.tag == "Enemy2")
-      {
-         enemyScript2.EnemyHealth2 -= 10f;
-         Debug.Log(enemyScript2.EnemyHealth2 + "Enemy Health");
-         
-      }
+      
+     
    }
 
-  
+   private void OnCollisionEnter2D(Collision2D other)
+   {
+      if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemyScript))
+      {
+         enemyScript.TakeDamage(10f);
+         print("damage taken");
+      }
+   }
 }
