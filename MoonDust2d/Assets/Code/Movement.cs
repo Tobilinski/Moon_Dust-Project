@@ -4,6 +4,7 @@ using Cursor = UnityEngine.Cursor;
 using Pathfinding;
 public class Movement : MonoBehaviour
 {
+   
     //physics variables
     public Rigidbody2D rb;
     public float _Speed = 7.0f;
@@ -40,6 +41,8 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("IsJumping", true);
         }
+
+        
     }
 
     private void Start()
@@ -94,6 +97,7 @@ public class Movement : MonoBehaviour
             //print("Jump");
         }
     }
+    //Attack of the player
     void attack()
     {
         if(Time.time >= _nextAttackTime)

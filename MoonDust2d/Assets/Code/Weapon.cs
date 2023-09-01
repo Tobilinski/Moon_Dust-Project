@@ -2,29 +2,38 @@
 
 using System;
 using UnityEngine;
+using Pathfinding;
 
 public class Weapon : MonoBehaviour
 {
    //public EnemyScript enemyScript;
-  
+   public AIPath[] _AIPath;
    private void OnTriggerEnter2D(Collider2D other)
    {
-      if (other.gameObject.tag == "Enemy1")
-      {
-         //enemyScript.EnemyHealth -= 10f;
-         //Debug.Log(enemyScript.EnemyHealth + "Enemy Health");
-         
-      }
+       if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemyScript))
+       {
+           enemyScript.TakeDamage(10f);
+           print("damage taken");
+       }
+       if(other.gameObject.CompareTag("SlowDown"))
+       {
+          
+              slowbaba();
+           
+       }
       
      
    }
 
-   private void OnCollisionEnter2D(Collision2D other)
+   void FastAgainBaba()
    {
-      if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemyScript))
-      {
-         enemyScript.TakeDamage(10f);
-         print("damage taken");
-      }
+       _AIPath[0].maxSpeed = 1.5f;
+       _AIPath[1].maxSpeed = 1.5f;
+   }
+   void slowbaba()
+   {
+       _AIPath[0].maxSpeed = 0.5f;
+       _AIPath[1].maxSpeed = 0.5f;
+       Invoke("FastAgainBaba",2f);
    }
 }
