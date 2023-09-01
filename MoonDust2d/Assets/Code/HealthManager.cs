@@ -20,10 +20,7 @@ public class HealthManager : MonoBehaviour
         {
             TakeDamage(10f);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && Health < 100f)
-        {
-            Heal(10f);
-        }
+        
             
     }
     
@@ -36,6 +33,7 @@ public class HealthManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
     public void Heal(float heal)
     {
         Health += heal;
