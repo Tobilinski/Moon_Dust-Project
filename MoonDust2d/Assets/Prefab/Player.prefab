@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2166235874010798910}
   - component: {fileID: 8598114657747951499}
   - component: {fileID: 6407826276603189094}
-  - component: {fileID: 4394548393942927063}
   - component: {fileID: 5593602871483891846}
   - component: {fileID: 4102315895008179407}
   - component: {fileID: 5639185769791919895}
@@ -36,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 3166305212286495226}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8598114657747951499
 SpriteRenderer:
@@ -107,19 +106,6 @@ MonoBehaviour:
   _JumpForce: 40
   animator: {fileID: 5639185769791919895}
   attackWeapon: {fileID: 3702989014436882609}
---- !u!114 &4394548393942927063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275400528404621967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f09d9da2d8acdf9479d9483678f0dcde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vcam: {fileID: 0}
 --- !u!50 &5593602871483891846
 Rigidbody2D:
   serializedVersion: 4
@@ -289,7 +275,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.042452812, g: 0.8549273, b: 1, a: 0.48235294}
+  m_Color: {r: 0.042452812, g: 0.8549273, b: 1, a: 0.6392157}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -311,6 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744057ddaf8e46f478cac1ba698aa768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _AIPath: []
 --- !u!61 &1322783538908770500
 BoxCollider2D:
   m_ObjectHideFlags: 0

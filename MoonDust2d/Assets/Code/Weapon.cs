@@ -18,23 +18,9 @@ public class Weapon : MonoBehaviour
        if(other.gameObject.CompareTag("SlowDown"))
        {
            slowBabaSlow();
-           DestroyImmediate(other.gameObject);
+           Destroy(other.gameObject);
        }
    }
-
-   private void Update()
-   {
-       if (Input.GetKeyDown(KeyCode.K))
-       {
-           _AIPath[0].canMove = false;
-       }
-       else if(Input.GetKeyDown(KeyCode.L))
-       {
-              _AIPath[0].canMove = true;
-       }
-       
-   }
-
    void FastAgainBaba()
    {
        _AIPath[0].maxSpeed = 1.5f;
@@ -45,6 +31,6 @@ public class Weapon : MonoBehaviour
    {
        _AIPath[0].maxSpeed = 0.5f;
        _AIPath[1].maxSpeed = 0.5f;
-       Invoke("FastAgainBaba",2f);
+       Invoke("FastAgainBaba",4f);
    }
 }
