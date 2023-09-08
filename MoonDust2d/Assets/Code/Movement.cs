@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
     //Attack variables
     public GameObject attackWeapon;
 
-    private float _attackRate = 1f;
+    private float _attackRate = 3f;
     private float _nextAttackTime;
 
     // Update is called once per frame
@@ -78,7 +78,7 @@ public class Movement : MonoBehaviour
         }
        
        
-       /* if(Time.time >= _nextAttackTime)
+       /*if(Time.time >= _nextAttackTime)
         {
             if (MeleeAttackBool)
             {
@@ -105,14 +105,14 @@ public class Movement : MonoBehaviour
                 animator.SetBool("IsKilling", true);
                 //print("Attack");
             }
-            else
-            {
-                attackWeapon.SetActive(false);
-                animator.SetBool("IsKilling", false);
-            }
+            
             
         }
-
+        else
+        {
+            attackWeapon.SetActive(false);
+            animator.SetBool("IsKilling", false);
+        }
         
      
     }
