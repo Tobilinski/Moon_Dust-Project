@@ -12,6 +12,7 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        
         if (vcam.m_Lens.Orthographic)
         {
             vcam.m_Lens.OrthographicSize -= Input.GetAxis("Mouse ScrollWheel") * zoom;

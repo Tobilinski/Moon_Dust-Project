@@ -2,13 +2,25 @@
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
 using Pathfinding;
+using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
-   
+    
+    private  bool MeleeAttackBool;
+    private bool IsMoving;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    
+    private float horizontal;
+    private float speed = 8f;
+    private float jumpForce = 10f;
+    private bool isFacingRight = true;
+    
+    
     //physics variables
     public Rigidbody2D rb;
-    public float _Speed = 7.0f;
-    public float _JumpForce = 10.0f;
+    public float _Speed = 24f;
+    public float _JumpForce = 80.0f;
     
     //Grounded variables
     private bool triggered;
@@ -19,7 +31,7 @@ public class Movement : MonoBehaviour
     //Attack variables
     public GameObject attackWeapon;
 
-    private float _attackRate = 6f;
+    private float _attackRate = 1f;
     private float _nextAttackTime;
 
     // Update is called once per frame
@@ -28,7 +40,11 @@ public class Movement : MonoBehaviour
         //print(_nextAttackTime);
         //Movement of the player
         Move(); 
-        attack();
+        
+        
+        //attack();
+        
+        
         //Test if the player is on the ground
         //print(triggered);
         
@@ -41,10 +57,74 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("IsJumping", true);
         }
+        
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        if (!isFacingRight && horizontal > 0f)
+        {
+            Flip();
+        }
+        else if (isFacingRight && horizontal < 0f)
+        {
+            Flip();
+        }
+
+        if (IsMoving)
+        {
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
+       
+       
+       /* if(Time.time >= _nextAttackTime)
+        {
+            if (MeleeAttackBool)
+            {
+           
+                _nextAttackTime = Time.time + 1f / _attackRate;
+                attackWeapon.SetActive(true);
+                animator.SetBool("IsKilling", true);
+                //print("Attack");
+            
+            }
+            else
+            {
+                attackWeapon.SetActive(false);
+                animator.SetBool("IsKilling", false);
+            }
+        }*/
+        
+        if (MeleeAttackBool)
+        {
+            if(Time.time >= _nextAttackTime)
+            {
+                _nextAttackTime = Time.time + 1f / _attackRate;
+                attackWeapon.SetActive(true);
+                animator.SetBool("IsKilling", true);
+                //print("Attack");
+            }
+            else
+            {
+                attackWeapon.SetActive(false);
+                animator.SetBool("IsKilling", false);
+            }
+            
+        }
 
         
+     
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     private void Start()
     {
         Cursor.visible = false;
@@ -70,8 +150,8 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.A)) {
             
-            transform.Translate(Vector3.left * Time.deltaTime * _Speed);
-            transform.localScale = new Vector3(-1, 1, 1);
+            //transform.Translate(Vector3.left * Time.deltaTime * _Speed);
+            //transform.localScale = new Vector3(-1, 1, 1);
             //Change the animation to moving
             animator.SetBool("Moving", true);
             animator.SetBool("IsJumping", false);
@@ -85,17 +165,17 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * Time.deltaTime * _Speed);
-            transform.localScale = new Vector3(1, 1, 1);
+            //transform.Translate(Vector3.right * Time.deltaTime * _Speed);
+            //transform.localScale = new Vector3(1, 1, 1);
             //Change the animation to moving
             animator.SetBool("Moving", true);
             animator.SetBool("IsJumping", false);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && triggered)
+       /* if (Input.GetKeyDown(KeyCode.Space) && triggered)
         {
             rb.velocity = Vector2.up * _JumpForce;
             //print("Jump");
-        }
+        }*/
     }
     //Attack of the player
     void attack()
@@ -121,6 +201,61 @@ public class Movement : MonoBehaviour
         else
         {
             animator.SetBool("IsKilling", false);  
+        }
+    }
+
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
+    }
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+       Vector3 localScale = transform.localScale;
+       localScale.x *= -1;
+       transform.localScale = localScale;
+    }
+    
+    public void MoveNew(InputAction.CallbackContext context)
+    {
+        horizontal = context.ReadValue<Vector2>().x;
+        if (context.performed)
+        {
+            IsMoving = true;
+        }
+        else if (context.canceled)
+        {
+            IsMoving = false;
+        }
+        
+        
+    }
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.y,jumpForce);
+            print("Jump");
+        }
+
+        if (context.canceled && rb.velocity.y >0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y * 0.1f);
+            //print("Jump");
+        }
+       
+    }
+    public void AttackMelee(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            MeleeAttackBool = true;
+            //print("Attack");
+        }
+        else if (context.canceled)
+        {
+            MeleeAttackBool = false;
         }
     }
     
