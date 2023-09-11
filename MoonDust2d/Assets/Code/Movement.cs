@@ -77,24 +77,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("Moving", false);
         }
        
-       
-       /*if(Time.time >= _nextAttackTime)
-        {
-            if (MeleeAttackBool)
-            {
-           
-                _nextAttackTime = Time.time + 1f / _attackRate;
-                attackWeapon.SetActive(true);
-                animator.SetBool("IsKilling", true);
-                //print("Attack");
-            
-            }
-            else
-            {
-                attackWeapon.SetActive(false);
-                animator.SetBool("IsKilling", false);
-            }
-        }*/
+        
         
         if (MeleeAttackBool)
         {
@@ -171,11 +154,6 @@ public class Movement : MonoBehaviour
             animator.SetBool("Moving", true);
             animator.SetBool("IsJumping", false);
         }
-       /* if (Input.GetKeyDown(KeyCode.Space) && triggered)
-        {
-            rb.velocity = Vector2.up * _JumpForce;
-            //print("Jump");
-        }*/
     }
     //Attack of the player
     void attack()

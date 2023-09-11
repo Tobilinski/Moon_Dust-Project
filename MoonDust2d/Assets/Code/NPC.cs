@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 public class NPC : MonoBehaviour
 {
     public GameObject dialoguePanel;
@@ -15,10 +16,13 @@ public class NPC : MonoBehaviour
     public bool playerIsClose;
     
     public TextMeshPro interactText;
+    
+    private bool _isInteracting;
+    private bool _nextLine;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        /*if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             if (dialoguePanel.activeInHierarchy)
             {
@@ -30,6 +34,22 @@ public class NPC : MonoBehaviour
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
             }
+        }*/
+
+        if (_isInteracting && playerIsClose)
+        {
+            
+            if (dialoguePanel.activeInHierarchy)
+            {
+                zeroText();
+            }
+            else
+            {
+                interactText.text = "";
+                dialoguePanel.SetActive(true);
+                StartCoroutine(Typing());
+            } 
+            _isInteracting = false;
         }
 
         if (dialogueText.text == dialogue[index])
@@ -39,6 +59,22 @@ public class NPC : MonoBehaviour
         else
         {
             contButton.SetActive(false);
+        }
+
+        if (_nextLine)
+        {
+            contButton.SetActive(false);
+            if (index < dialogue.Length - 1)
+            {
+                index++;
+                dialogueText.text = "";
+                StartCoroutine(Typing());
+            }
+            else
+            {
+                zeroText();
+            }
+            _nextLine = false;
         }
     }
 
@@ -91,6 +127,30 @@ public class NPC : MonoBehaviour
             Cursor.visible = false;
             playerIsClose = false;
             zeroText();
+        }
+    }
+    
+    public void Talk(InputAction.CallbackContext context)
+    {
+        if (context.action.IsPressed())
+        {
+            _isInteracting = true;
+            print("Interact");
+        }
+        else if (context.canceled)
+        {
+            _isInteracting = false;
+        }
+    }
+    public void TalkNext(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+           _nextLine = true; 
+        }
+        else
+        {
+            _nextLine = false;
         }
     }
 }
