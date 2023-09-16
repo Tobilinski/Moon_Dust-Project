@@ -6,8 +6,7 @@ public class Weapon : MonoBehaviour
 {
     [Header("Amount of enemies for slow ability")]
     [Space(10)]
-   //public EnemyScript enemyScript;
-   public AIPath[] _AIPath;
+    public AIPath[] _AIPath;
    private void OnTriggerEnter2D(Collider2D other)
    {
        if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemyScript))

@@ -19,15 +19,16 @@ public class Movement : MonoBehaviour
     private float horizontal;
     [Header("Movement Variables")]
     [Space(10)]
-    [SerializeField] private float speed = 8f; private float jumpForce = 12f;
+    [SerializeField] private float speed = 8f; 
+    [SerializeField] private float jumpForce = 12f;
+    
     
     private bool isFacingRight = true;
     
     
     //physics variables
     private Rigidbody2D rb;
-    public float _Speed = 24f;
-    public float _JumpForce = 80.0f;
+    
     
     //Grounded variables
     private bool triggered;
@@ -50,7 +51,7 @@ public class Movement : MonoBehaviour
        rb = GetComponent<Rigidbody2D>(); 
     }
     // Update is called once per frame
-    void Update()
+    public void FixedUpdate()
     {
         //print(_nextAttackTime);
         //Movement of the player
