@@ -1,24 +1,31 @@
 // Date Created: 28/08/2023
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
-using Pathfinding;
 using UnityEngine.InputSystem;
+
+[RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
     
     private  bool MeleeAttackBool;
     private bool IsMoving;
+    
+    [Header("Ground Check Variables")]
+    [Space(10)]
     public Transform groundCheck;
     public LayerMask groundLayer;
+    [Space(10)] 
     
     private float horizontal;
-    private float speed = 8f;
-    private float jumpForce = 12f;
+    [Header("Movement Variables")]
+    [Space(10)]
+    [SerializeField] private float speed = 8f; private float jumpForce = 12f;
+    
     private bool isFacingRight = true;
     
     
     //physics variables
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public float _Speed = 24f;
     public float _JumpForce = 80.0f;
     
@@ -26,21 +33,29 @@ public class Movement : MonoBehaviour
     private bool triggered;
     
     //Animation variables
+    [Header("Animation Slot")]
+    [Space(10)]
     public Animator animator;
     
     //Attack variables
+    [Header("Attack Weapon slot")]
+    [Space(10)]
     public GameObject attackWeapon;
 
     private float _attackRate = 3f;
     private float _nextAttackTime;
 
+    public void Awake()
+    {
+       rb = GetComponent<Rigidbody2D>(); 
+    }
     // Update is called once per frame
     void Update()
     {
         //print(_nextAttackTime);
         //Movement of the player
         Move(); 
-        
+       
         
         //attack();
         
@@ -99,13 +114,6 @@ public class Movement : MonoBehaviour
         
      
     }
-
-    
-    
-    
-    
-    
-    
     
     
     private void Start()

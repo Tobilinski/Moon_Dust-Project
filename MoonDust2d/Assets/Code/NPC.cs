@@ -6,15 +6,17 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 public class NPC : MonoBehaviour
 {
+    [Header("Dialogue Variables")]
+    [Space(10)]
     public GameObject dialoguePanel;
     public Text dialogueText;
     public string[] dialogue;
-
+    [Space(10)]
     private int index;
     public GameObject contButton;
     public float wordSpeed;
     public bool playerIsClose;
-    
+    [Space(10)]
     public TextMeshPro interactText;
     
     private bool _isInteracting;

@@ -1,12 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    
+    [Header("Soul health Variables")]
+    [Space(10)]
     public float Health = 100f;
     public Image healthBar;
     private float _attackRate = 3f;

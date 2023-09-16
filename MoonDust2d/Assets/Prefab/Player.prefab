@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2166235874010798910}
   - component: {fileID: 8598114657747951499}
-  - component: {fileID: 6407826276603189094}
   - component: {fileID: 5593602871483891846}
+  - component: {fileID: 6407826276603189094}
   - component: {fileID: 4102315895008179407}
   - component: {fileID: 5639185769791919895}
   - component: {fileID: 7728488355526344285}
@@ -37,7 +37,7 @@ Transform:
   - {fileID: 3166305212286495226}
   - {fileID: 7157139888339170112}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8598114657747951499
 SpriteRenderer:
@@ -91,27 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6407826276603189094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275400528404621967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b24f0a00692ef6242acf1218b8a2612f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundCheck: {fileID: 7157139888339170112}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  rb: {fileID: 5593602871483891846}
-  _Speed: 15
-  _JumpForce: 40
-  animator: {fileID: 5639185769791919895}
-  attackWeapon: {fileID: 3702989014436882609}
 --- !u!50 &5593602871483891846
 Rigidbody2D:
   serializedVersion: 4
@@ -139,6 +118,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &6407826276603189094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275400528404621967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24f0a00692ef6242acf1218b8a2612f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 7157139888339170112}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  speed: 8
+  _Speed: 15
+  _JumpForce: 40
+  animator: {fileID: 5639185769791919895}
+  attackWeapon: {fileID: 3702989014436882609}
 --- !u!61 &4102315895008179407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -326,6 +326,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 09804048-7fb5-4cde-83d7-03dd69e8d31f
     m_ActionName: Player/Attack[/Mouse/leftButton,/DualShock4GamepadHID/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8e92c220-68b1-42dc-b180-814f48799dab
+    m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b1a6fe84-6e62-450d-877b-a12f6bf99613
+    m_ActionName: Player/NextText
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

@@ -1,10 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
+
 public class EnemyScript : MonoBehaviour
 {
+    [Header("Enemy health variable")]
+    [Space(10)]
     [SerializeField] private float _health, _maxHealth = 30f;
    
 
