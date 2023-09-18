@@ -12,6 +12,10 @@ TagManager:
   - SlowDown
   - Respawn1
   - Respawn2
+  - Respawn3
+  - Spawner1
+  - Spawner2
+  - Spawner3
   layers:
   - Default
   - TransparentFX

@@ -154,6 +154,10 @@ public class Movement : MonoBehaviour
         {
             _Player.transform.position = new Vector2(160.6f,12f);
         }
+        if (other.gameObject.tag == "Respawn3")
+        {
+            _Player.transform.position = new Vector2(387.49f,27f);
+        }
         
     }
     
