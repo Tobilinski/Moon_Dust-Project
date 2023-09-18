@@ -21,26 +21,16 @@ public class NPC : MonoBehaviour
     
     private bool _isInteracting;
     private bool _nextLine;
+    
+    public Button theButton;
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
-        {
-            if (dialoguePanel.activeInHierarchy)
-            {
-                zeroText();
-            }
-            else
-            {
-                interactText.text = "";
-                dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
-            }
-        }*/
+        
 
         if (_isInteracting && playerIsClose)
         {
-            
+            theButton.Select();
             if (dialoguePanel.activeInHierarchy)
             {
                 zeroText();
@@ -136,8 +126,9 @@ public class NPC : MonoBehaviour
     {
         if (context.action.IsPressed())
         {
+            
             _isInteracting = true;
-            print("Interact");
+            //print("Interact");
         }
         else if (context.canceled)
         {

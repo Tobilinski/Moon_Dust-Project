@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    [Header("Enemy health variable")]
-    [Space(10)]
-    [SerializeField] private float _health, _maxHealth = 30f;
+    [Header("Enemy health variable")] [Space(10)]
+    private float _health;
+    [SerializeField]  private float _maxHealth = 30f;
    
 
    private void Start()

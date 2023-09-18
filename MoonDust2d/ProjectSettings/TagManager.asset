@@ -10,6 +10,8 @@ TagManager:
   - Enemy1
   - Enemy2
   - SlowDown
+  - Respawn1
+  - Respawn2
   layers:
   - Default
   - TransparentFX

@@ -1,12 +1,15 @@
 // Date Created: 28/08/2023
+
+using System;
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
-{
-    
+{   
+    //Variables
+    //////////////////////////////////////////////
     private  bool MeleeAttackBool;
     private bool IsMoving;
     
@@ -45,6 +48,14 @@ public class Movement : MonoBehaviour
 
     private float _attackRate = 3f;
     private float _nextAttackTime;
+    //Player GameObject
+    [SerializeField]
+    private GameObject _Player;
+    //////////////////////////////////////////////
+
+
+
+
 
     public void Awake()
     {
@@ -53,11 +64,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     public void FixedUpdate()
     {
-        //print(_nextAttackTime);
-        //Movement of the player
-        Move(); 
-       
-        
         //attack();
         
         
@@ -137,33 +143,20 @@ public class Movement : MonoBehaviour
             triggered = false;
         }
     }
-    //Movement of the player
-    public void Move()
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(Input.GetKey(KeyCode.A)) {
-            
-            //transform.Translate(Vector3.left * Time.deltaTime * _Speed);
-            //transform.localScale = new Vector3(-1, 1, 1);
-            //Change the animation to moving
-            animator.SetBool("Moving", true);
-            animator.SetBool("IsJumping", false);
-        }
-        //Check if the Any key is pressed to change the animation back to idle
-        else if (Input.GetKey(KeyCode.A) == false)
+        if (other.gameObject.tag == "Respawn1")
         {
-            //Change the animation to idle
-            animator.SetBool("Moving", false);
-            
+            _Player.transform.position = new Vector2(112.8f,12f);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (other.gameObject.tag == "Respawn2")
         {
-            //transform.Translate(Vector3.right * Time.deltaTime * _Speed);
-            //transform.localScale = new Vector3(1, 1, 1);
-            //Change the animation to moving
-            animator.SetBool("Moving", true);
-            animator.SetBool("IsJumping", false);
+            _Player.transform.position = new Vector2(160.6f,12f);
         }
+        
     }
+    
     //Attack of the player
     void attack()
     {
@@ -223,7 +216,7 @@ public class Movement : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.y,jumpForce);
-            print("Jump");
+            //print("Jump");
         }
 
         if (context.canceled && rb.velocity.y >0f)
