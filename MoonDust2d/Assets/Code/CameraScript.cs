@@ -1,25 +1,45 @@
+using System;
 using UnityEngine;
 using Cinemachine;
 public class CameraScript : MonoBehaviour
 {
-    private float zoom = 4f;
-
+    [Header("Camera shake Time")]
+    [Space(10)]
+    [SerializeField]
+    private float ShakeTime;
+    public static CameraScript Instance { get; private set;}
      //private Camera cam;
-    [SerializeField] private CinemachineVirtualCamera vcam;
+     private CinemachineVirtualCamera vcam;
+
+    private void Awake()
+    {
+        Instance = this;
+        vcam = GetComponent<CinemachineVirtualCamera>();
+    }
 
     // Update is called once per frame
     public void Update()
     {
-        
-        if (vcam.m_Lens.Orthographic)
+        //Camera shake
+       ShakeTime -= Time.deltaTime;
+       StopShake();
+    }
+
+    public void ShakeCamera(float intensity, float time)
+    {
+        CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
+        ShakeTime = time;
+    }
+
+    void StopShake()
+    {
+        if (ShakeTime <= 0f)
         {
-            vcam.m_Lens.OrthographicSize -= Input.GetAxis("Mouse ScrollWheel") * zoom;
+            CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
+                vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0f;
         }
-        else
-        {
-            vcam.m_Lens.OrthographicSize -= Input.GetAxis("Mouse ScrollWheel") * zoom;
-        }
-       
-         
     }
 }

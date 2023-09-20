@@ -29,8 +29,6 @@ public class HealthManager : MonoBehaviour
         {
             TakeDamage(10f);
         }
-        
-        
     }
     
     public void TakeDamage(float damage)

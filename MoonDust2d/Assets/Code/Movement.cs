@@ -110,16 +110,12 @@ public class Movement : MonoBehaviour
                 animator.SetBool("IsKilling", true);
                 //print("Attack");
             }
-            
-            
         }
         else
         {
             attackWeapon.SetActive(false);
             animator.SetBool("IsKilling", false);
         }
-        
-     
     }
     
     

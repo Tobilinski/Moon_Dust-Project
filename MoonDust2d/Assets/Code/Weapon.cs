@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
            enemyScript.TakeDamage(10f);
            print("damage taken from melee attack");
        }
+       
        if(other.gameObject.CompareTag("SlowDown"))
        {
            slowBabaSlow();

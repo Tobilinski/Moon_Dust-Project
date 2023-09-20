@@ -26,8 +26,6 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         if (_isInteracting && playerIsClose)
         {
             theButton.Select();
@@ -84,7 +82,6 @@ public class NPC : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
-       
     }
     
     public void NextLine()

@@ -18,8 +18,6 @@ public class HealthOrb : MonoBehaviour
             print(_healthManager.Health);
             Destroy(gameObject);
         }
-        
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,13 +36,11 @@ public class HealthOrb : MonoBehaviour
             _isClose = false;
             interactText.text = "";
         }
-       
     }
     public void absorb(InputAction.CallbackContext context)
     {
         if (context.action.IsPressed())
         {
-            
             _isInteracting = true;
             //print("Interact");
         }

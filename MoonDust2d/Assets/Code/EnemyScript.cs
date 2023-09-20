@@ -15,6 +15,7 @@ public class EnemyScript : MonoBehaviour
    public void TakeDamage(float damageAmount)
    {
        _health -= damageAmount;
+       CameraScript.Instance.ShakeCamera(2f, 0.1f);
        if(_health <= 0f)
        {
            Destroy(gameObject);
