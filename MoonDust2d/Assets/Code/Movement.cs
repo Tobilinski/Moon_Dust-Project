@@ -1,6 +1,7 @@
 // Date Created: 28/08/2023
 
 using System;
+using System.Security.Principal;
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
 using UnityEngine.InputSystem;
@@ -10,7 +11,9 @@ public class Movement : MonoBehaviour
 {   
     //Variables
     //////////////////////////////////////////////
-    private  bool MeleeAttackBool;
+    private int _UltimateAbCount = 1;
+    private bool MeleeAttackBool;
+    private bool UltimateAttackBool;
     private bool IsMoving;
     
     [Header("Ground Check Variables")]
@@ -56,17 +59,16 @@ public class Movement : MonoBehaviour
 
 
 
-
+   
     public void Awake()
-    {
+    { 
+       Cursor.visible = false;
        rb = GetComponent<Rigidbody2D>(); 
     }
     // Update is called once per frame
     public void FixedUpdate()
     {
-        //attack();
-        
-        
+        UltimateAttack();
         //Test if the player is on the ground
         //print(triggered);
         
@@ -119,10 +121,7 @@ public class Movement : MonoBehaviour
     }
     
     
-    private void Start()
-    {
-        Cursor.visible = false;
-    }
+    
 
     //Test if the player is on the ground
     private void OnCollisionEnter2D (Collision2D other)
@@ -237,6 +236,28 @@ public class Movement : MonoBehaviour
         {
             MeleeAttackBool = false;
         }
+    }
+    public void Ultimate(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            UltimateAttackBool = true;
+            //print("Attack");
+        }
+        else if (context.canceled)
+        {
+            UltimateAttackBool = false;
+        }
+    }
+    
+    public void UltimateAttack()
+    {
+        if (UltimateAttackBool && MeleeAttackBool && _UltimateAbCount == 1)
+        {
+          print("Ultimate Attack");  
+          _UltimateAbCount = 0;
+        }
+       
     }
     
 }
