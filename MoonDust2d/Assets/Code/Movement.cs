@@ -105,6 +105,7 @@ public class Movement : MonoBehaviour
         
         if (MeleeAttackBool)
         {
+            MeleeAttackBool = false;
             if(Time.time >= _nextAttackTime)
             {
                 _nextAttackTime = Time.time + 1f / _attackRate;
