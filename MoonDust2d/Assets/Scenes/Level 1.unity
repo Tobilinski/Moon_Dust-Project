@@ -16109,7 +16109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1053113269}
-  parallaxEffect: 4
+  parallaxEffect: 3.14
   autoScroll: 0
 --- !u!1 &570907345
 GameObject:
