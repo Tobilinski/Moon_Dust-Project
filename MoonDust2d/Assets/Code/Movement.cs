@@ -18,8 +18,10 @@ public class Movement : MonoBehaviour
     
     [Header("Ground Check Variables")]
     [Space(10)]
+    
     public Transform groundCheck;
     public LayerMask groundLayer;
+    
     [Space(10)] 
     
     private float horizontal;
@@ -42,6 +44,7 @@ public class Movement : MonoBehaviour
     //Animation variables
     [Header("Animation Slot")]
     [Space(10)]
+    
     public Animator animator;
     
     //Attack variables
