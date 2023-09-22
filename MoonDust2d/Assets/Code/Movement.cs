@@ -66,7 +66,7 @@ public class Movement : MonoBehaviour
        rb = GetComponent<Rigidbody2D>(); 
     }
     // Update is called once per frame
-    public void FixedUpdate()
+    public void Update()
     {
         UltimateAttack();
         //Test if the player is on the ground
@@ -105,12 +105,13 @@ public class Movement : MonoBehaviour
         
         if (MeleeAttackBool)
         {
-            MeleeAttackBool = false;
+            
             if(Time.time >= _nextAttackTime)
             {
                 _nextAttackTime = Time.time + 1f / _attackRate;
                 attackWeapon.SetActive(true);
                 animator.SetBool("IsKilling", true);
+                Invoke(nameof(MeleeStop), 0.1f);
                 //print("Attack");
             }
         }
@@ -120,21 +121,24 @@ public class Movement : MonoBehaviour
             animator.SetBool("IsKilling", false);
         }
     }
-    
-    
-    
+
+    public void MeleeStop()  
+    {
+        MeleeAttackBool = false;
+    }
+
 
     //Test if the player is on the ground
     private void OnCollisionEnter2D (Collision2D other)
     {
-        if (other.gameObject.tag == "Platform")
+        if (other.gameObject.CompareTag("Platform"))
         {
             triggered = true;
         }
     }
     private void OnCollisionExit2D (Collision2D other)
     {
-        if (other.gameObject.tag == "Platform")
+        if (other.gameObject.CompareTag("Platform"))
         {
             triggered = false;
         }
@@ -157,34 +161,7 @@ public class Movement : MonoBehaviour
         
     }
     
-    //Attack of the player
-    void attack()
-    {
-        if(Time.time >= _nextAttackTime)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                _nextAttackTime = Time.time + 1f / _attackRate;
-                attackWeapon.SetActive(true);
-                //print("Attack");
-            }
-            else
-            {
-                attackWeapon.SetActive(false);
-            }
-        }
-        //Change the animation to attack
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            animator.SetBool("IsKilling", true);
-        }
-        else
-        {
-            animator.SetBool("IsKilling", false);  
-        }
-    }
-
-
+    
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);

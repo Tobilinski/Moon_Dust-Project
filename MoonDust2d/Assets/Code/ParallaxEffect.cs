@@ -19,7 +19,7 @@ public class ParallaxEffect : MonoBehaviour
        // textureUnitSizeX = texture.width / sprite.pixelsPerUnit;
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
         transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, deltaMovement.y * parallaxEffectMultiplier.y);
