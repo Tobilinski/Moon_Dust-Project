@@ -7,13 +7,13 @@ using UnityEngine.InputSystem;
 public class FireBullets : MonoBehaviour
 {
     [SerializeField]
-    private int bulletAmount = 10;
+    private int bulletAmount;
     [SerializeField]
-    private float startAngle = 90f, endAngle = 270f;
+    private float startAngle, endAngle;
     
     private Vector2 bulletMoveDirection;
     
-    public static int _UltimateAbCount = 5;
+    public static int _UltimateAbCount = 0;
     public bool UltimateAttackBool;
     
    

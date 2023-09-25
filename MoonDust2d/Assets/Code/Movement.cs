@@ -8,8 +8,11 @@ public class Movement : MonoBehaviour
 {   
     //Variables
     //////////////////////////////////////////////
+    [Header("Secret Ramp")]
+    [Space(10)]
+    public GameObject SecretPlat;
     
-    
+    [Space(10)]
     public static bool MeleeAttackBool;
     private bool IsMoving;
     
@@ -63,7 +66,8 @@ public class Movement : MonoBehaviour
     public void Awake()
     { 
        Cursor.visible = false;
-       rb = GetComponent<Rigidbody2D>(); 
+       rb = GetComponent<Rigidbody2D>();
+       SecretPlat.SetActive(false);
     }
     // Update is called once per frame
     public void Update()
@@ -162,10 +166,16 @@ public class Movement : MonoBehaviour
         {
             _Player.transform.position = new Vector2(545.37f,29.79f);
         }
-        
+        if (other.gameObject.tag == "Secret")
+        {
+            Invoke("SecretDoor", 5f);
+        }
     }
     
-    
+    private void SecretDoor()
+    {
+        SecretPlat.SetActive(true);
+    }
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);

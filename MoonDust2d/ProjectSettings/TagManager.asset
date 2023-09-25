@@ -18,6 +18,7 @@ TagManager:
   - Spawner3
   - Respawn4
   - Ultimate
+  - Secret
   layers:
   - Default
   - TransparentFX
