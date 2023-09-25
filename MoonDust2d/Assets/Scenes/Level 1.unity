@@ -35814,11 +35814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1842254864452996265, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 192.6
+      value: -525
       objectReference: {fileID: 0}
     - target: {fileID: 1842254864452996265, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.9
+      value: -49.4
       objectReference: {fileID: 0}
     - target: {fileID: 2152570799184826583, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_Lens.OrthographicSize
@@ -35858,11 +35858,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 192.59998
+      value: -525
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.900002
+      value: -49.4
       objectReference: {fileID: 0}
     - target: {fileID: 5341688252079068945, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_Interpolate
@@ -35874,11 +35874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 192.59998
+      value: -525
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.900002
+      value: -49.4
       objectReference: {fileID: 0}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: _Player
