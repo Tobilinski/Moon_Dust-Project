@@ -16,6 +16,8 @@ TagManager:
   - Spawner1
   - Spawner2
   - Spawner3
+  - Respawn4
+  - Ultimate
   layers:
   - Default
   - TransparentFX

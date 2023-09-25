@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3468070166952384363}
   - component: {fileID: 3386738416196601277}
   - component: {fileID: 77373865130657308}
+  - component: {fileID: 73154566451089574}
   - component: {fileID: 2338701155402347708}
   m_Layer: 0
   m_Name: Enemy
@@ -35,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 3069965771875895275}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4645991244808753620
 MonoBehaviour:
@@ -156,6 +157,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &73154566451089574
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143391787852307700}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!114 &2338701155402347708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc580a1100e257e46ade02be9ccd9b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 0
   _maxHealth: 30
 --- !u!1 &3265950082991869964
 GameObject:

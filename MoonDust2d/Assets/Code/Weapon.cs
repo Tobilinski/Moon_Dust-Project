@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     public AIPath[] _AIPath;
    private void OnTriggerEnter2D(Collider2D other)
    {
+       
        if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemyScript))
        {
            enemyScript.TakeDamage(10f);

@@ -1,7 +1,4 @@
 // Date Created: 28/08/2023
-
-using System;
-using System.Security.Principal;
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
 using UnityEngine.InputSystem;
@@ -11,9 +8,9 @@ public class Movement : MonoBehaviour
 {   
     //Variables
     //////////////////////////////////////////////
-    private int _UltimateAbCount = 1;
-    private bool MeleeAttackBool;
-    private bool UltimateAttackBool;
+    
+    
+    public static bool MeleeAttackBool;
     private bool IsMoving;
     
     [Header("Ground Check Variables")]
@@ -71,7 +68,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        UltimateAttack();
+        
         //Test if the player is on the ground
         //print(triggered);
         
@@ -161,6 +158,10 @@ public class Movement : MonoBehaviour
         {
             _Player.transform.position = new Vector2(387.49f,27f);
         }
+        if (other.gameObject.tag == "Respawn4")
+        {
+            _Player.transform.position = new Vector2(545.37f,29.79f);
+        }
         
     }
     
@@ -218,27 +219,4 @@ public class Movement : MonoBehaviour
             MeleeAttackBool = false;
         }
     }
-    public void Ultimate(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            UltimateAttackBool = true;
-            //print("Attack");
-        }
-        else if (context.canceled)
-        {
-            UltimateAttackBool = false;
-        }
-    }
-    
-    public void UltimateAttack()
-    {
-        if (UltimateAttackBool && MeleeAttackBool && _UltimateAbCount == 1)
-        {
-          print("Ultimate Attack");  
-          _UltimateAbCount = 0;
-        }
-       
-    }
-    
 }
