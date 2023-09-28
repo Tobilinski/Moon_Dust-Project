@@ -13,6 +13,7 @@ public class HealthManager : MonoBehaviour
     [Space(10)]
     public float Health = 100f;
     public Image healthBar;
+    [SerializeField]
     private float _attackRate = 3f;
     private float _nextAttackTime;
     

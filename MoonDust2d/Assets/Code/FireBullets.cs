@@ -49,7 +49,7 @@ public class FireBullets : MonoBehaviour
     public void UltimateAttack()
     {
         
-        if (UltimateAttackBool && Movement.MeleeAttackBool && _UltimateAbCount >= 5)
+        if (UltimateAttackBool && Movement.MeleeAttackBool && _UltimateAbCount >= 4 )
         {
             //print("Ultimate Attack"); 
             Fire();

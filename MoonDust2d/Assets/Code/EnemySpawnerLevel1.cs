@@ -17,6 +17,14 @@ public class EnemySpawnerLevel1 : MonoBehaviour
     [Header("Wave three")]
     [Space(10)]
     public GameObject[] EnemyWave3;
+    
+    [Header("Wave four")]
+    [Space(10)]
+    public GameObject[] EnemyWave4;
+    
+    [Header("Wave Five")]
+    [Space(10)]
+    public GameObject[] EnemyWave5;
     // Start is called before the first frame update
    
 
@@ -33,6 +41,18 @@ public class EnemySpawnerLevel1 : MonoBehaviour
         if (other.gameObject.tag == "Spawner3")
         {
             StartCoroutine(Spawning3());
+        }
+        if (other.gameObject.tag == "Spawner4")
+        {
+            StartCoroutine(Spawning4());
+        }
+        if (other.gameObject.tag == "Spawner5")
+        {
+            StartCoroutine(Spawning5());
+        }
+        if (other.gameObject.tag == "Spawner6")
+        {
+            StartCoroutine(Spawning6());
         }
     }
 
@@ -56,6 +76,32 @@ public class EnemySpawnerLevel1 : MonoBehaviour
     IEnumerator Spawning3()
     {
         foreach (var number in EnemyWave3)
+        {
+            number.SetActive(true);
+            yield return new WaitForSeconds(SpawnSpeed);
+        }
+    }
+    IEnumerator Spawning4()
+    {
+        yield return new WaitForSeconds(2f);
+        foreach (var number in EnemyWave3)
+        {
+            number.SetActive(true);
+            yield return new WaitForSeconds(SpawnSpeed);
+        }
+    }
+    
+    IEnumerator Spawning5()
+    {
+        foreach (var number in EnemyWave4)
+        {
+            number.SetActive(true);
+            yield return new WaitForSeconds(SpawnSpeed);
+        }
+    }
+    IEnumerator Spawning6()
+    {
+        foreach (var number in EnemyWave5)
         {
             number.SetActive(true);
             yield return new WaitForSeconds(SpawnSpeed);

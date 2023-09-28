@@ -2,6 +2,7 @@
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
@@ -15,6 +16,7 @@ public class Movement : MonoBehaviour
     [Space(10)]
     public static bool MeleeAttackBool;
     private bool IsMoving;
+    public static int KillCount;
     
     [Header("Ground Check Variables")]
     [Space(10)]
@@ -150,6 +152,7 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Benutzt ein Switch Statement !!!!!!!!!!!!!!
         if (other.gameObject.tag == "Respawn1")
         {
             _Player.transform.position = new Vector2(112.8f,12f);
@@ -166,10 +169,27 @@ public class Movement : MonoBehaviour
         {
             _Player.transform.position = new Vector2(545.37f,29.79f);
         }
+        if (other.gameObject.tag == "Respawn5")
+        {
+            _Player.transform.position = new Vector2(8.5f,-51.7f);
+        }
+        if (other.gameObject.tag == "Respawn6")
+        {
+            _Player.transform.position = new Vector2(46.9f,-31.7f);
+        }
+        if (other.gameObject.tag == "Respawn7")
+        {
+            _Player.transform.position = new Vector2(179.8f,-35.7f);
+        }
         if (other.gameObject.tag == "Secret")
         {
             Invoke("SecretDoor", 5f);
         }
+        if (other.gameObject.tag == "NextLevel")
+        {
+            SceneManager.LoadScene(sceneBuildIndex: +1);
+        }
+        
     }
     
     private void SecretDoor()

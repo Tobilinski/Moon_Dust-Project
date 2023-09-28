@@ -19,6 +19,13 @@ TagManager:
   - Respawn4
   - Ultimate
   - Secret
+  - NextLevel
+  - Spawner4
+  - Spawner5
+  - Spawner6
+  - Respawn5
+  - Respawn6
+  - Respawn7
   layers:
   - Default
   - TransparentFX

@@ -132,15 +132,5 @@ public class NPC : MonoBehaviour
             _isInteracting = false;
         }
     }
-    public void TalkNext(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-           _nextLine = true; 
-        }
-        else
-        {
-            _nextLine = false;
-        }
-    }
+    
 }
