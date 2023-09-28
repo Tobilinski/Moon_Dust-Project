@@ -20,7 +20,6 @@ public class HealthManager : MonoBehaviour
     private void Awake()
     {
         gameObject.tag = "Soul";
-        
     }
 
     // Update is called once per frame
@@ -47,20 +46,7 @@ public class HealthManager : MonoBehaviour
         Health += heal;
         healthBar.fillAmount = Health / 100f;
     }
-
-   
-        //Keine ahnung warum das nicht funktioniert. Es hat vorher super funktioniert.
-    /*private void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Enemy" && Time.time >= _nextAttackTime)
-        {
-            TakeDamage(10f);
-            _nextAttackTime = Time.time + 1f / _attackRate;
-            print("damage taken");
-        }
-      
-    }*/
-    //Das hier funktioniert aber. Damage wird genommen wenn der 'Enemy' in der Box ist.
+    
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Enemy" && Time.time >= _nextAttackTime)

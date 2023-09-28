@@ -54,6 +54,7 @@ public class EnemySpawnerLevel1 : MonoBehaviour
         {
             StartCoroutine(Spawning6());
         }
+        
     }
 
     
@@ -90,7 +91,6 @@ public class EnemySpawnerLevel1 : MonoBehaviour
             yield return new WaitForSeconds(SpawnSpeed);
         }
     }
-    
     IEnumerator Spawning5()
     {
         foreach (var number in EnemyWave4)

@@ -33040,6 +33040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   healthBar: {fileID: 1234817788}
+  _attackRate: 3
 --- !u!114 &1906293885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38296,11 +38297,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 923.2
+      value: 663.4
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.4
+      value: 36.4
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39887,6 +39888,8 @@ MonoBehaviour:
   - {fileID: 1405411590}
   - {fileID: 449462696}
   - {fileID: 435478521}
+  EnemyWave4: []
+  EnemyWave5: []
 --- !u!4 &8880814914238572321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1842254864452996265, guid: 922e4942781d0b9449140262cb8607de, type: 3}

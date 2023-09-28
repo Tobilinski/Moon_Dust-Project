@@ -1,4 +1,6 @@
 // Date Created: 28/08/2023
+
+using System.Collections.Generic;
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
 using UnityEngine.InputSystem;
@@ -12,7 +14,7 @@ public class Movement : MonoBehaviour
     [Header("Secret Ramp")]
     [Space(10)]
     public GameObject SecretPlat;
-    
+
     [Space(10)]
     public static bool MeleeAttackBool;
     private bool IsMoving;
@@ -33,7 +35,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float jumpForce = 12f;
     
     
-    private bool isFacingRight = true;
+    private bool _isFacingRight = true;
     
     
     //physics variables
@@ -41,7 +43,7 @@ public class Movement : MonoBehaviour
     
     
     //Grounded variables
-    private bool triggered;
+    private bool _triggered;
     
     //Animation variables
     [Header("Animation Slot")]
@@ -56,15 +58,23 @@ public class Movement : MonoBehaviour
 
     private float _attackRate = 3f;
     private float _nextAttackTime;
-    //Player GameObject
-    [SerializeField]
-    private GameObject _Player;
+  
+   
     //////////////////////////////////////////////
 
+    private Dictionary<string, Vector2> _respawnPositions = new Dictionary<string, Vector2>()
+    {
+        {"Respawn1", new Vector2(112.8f, 12f)},
+        {"Respawn2", new Vector2(160.6f, 12f)},
+        {"Respawn3", new Vector2(387.49f, 27f)},
+        {"Respawn4", new Vector2(545.37f, 29.79f)},
+        {"Respawn5", new Vector2(8.5f, -51.7f)},
+        {"Respawn6", new Vector2(46.9f, -31.7f)},
+        {"Respawn7", new Vector2(179.8f, -35.7f)}
+    };
+    
 
 
-
-   
     public void Awake()
     { 
        Cursor.visible = false;
@@ -74,12 +84,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+       
         
         //Test if the player is on the ground
         //print(triggered);
         
         //Change the animation to jumping
-        if (triggered)
+        if (_triggered)
         {
             animator.SetBool("IsJumping", false);
         }
@@ -89,11 +100,11 @@ public class Movement : MonoBehaviour
         }
         
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        if (!isFacingRight && horizontal > 0f)
+        if (!_isFacingRight && horizontal > 0f)
         {
             Flip();
         }
-        else if (isFacingRight && horizontal < 0f)
+        else if (_isFacingRight && horizontal < 0f)
         {
             Flip();
         }
@@ -139,58 +150,33 @@ public class Movement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Platform"))
         {
-            triggered = true;
+            _triggered = true;
         }
     }
     private void OnCollisionExit2D (Collision2D other)
     {
         if (other.gameObject.CompareTag("Platform"))
         {
-            triggered = false;
+            _triggered = false;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Benutzt ein Switch Statement !!!!!!!!!!!!!!
-        if (other.gameObject.tag == "Respawn1")
+        if (_respawnPositions.TryGetValue(other.gameObject.tag, out Vector2 newPosition))
         {
-            _Player.transform.position = new Vector2(112.8f,12f);
+            transform.position = newPosition;
         }
-        if (other.gameObject.tag == "Respawn2")
-        {
-            _Player.transform.position = new Vector2(160.6f,12f);
-        }
-        if (other.gameObject.tag == "Respawn3")
-        {
-            _Player.transform.position = new Vector2(387.49f,27f);
-        }
-        if (other.gameObject.tag == "Respawn4")
-        {
-            _Player.transform.position = new Vector2(545.37f,29.79f);
-        }
-        if (other.gameObject.tag == "Respawn5")
-        {
-            _Player.transform.position = new Vector2(8.5f,-51.7f);
-        }
-        if (other.gameObject.tag == "Respawn6")
-        {
-            _Player.transform.position = new Vector2(46.9f,-31.7f);
-        }
-        if (other.gameObject.tag == "Respawn7")
-        {
-            _Player.transform.position = new Vector2(179.8f,-35.7f);
-        }
-        if (other.gameObject.tag == "Secret")
+        else if (other.gameObject.CompareTag("Secret"))
         {
             Invoke("SecretDoor", 5f);
         }
-        if (other.gameObject.tag == "NextLevel")
+        else if (other.gameObject.CompareTag("NextLevel"))
         {
             SceneManager.LoadScene(sceneBuildIndex: +1);
         }
-        
     }
+   
     
     private void SecretDoor()
     {
@@ -202,7 +188,7 @@ public class Movement : MonoBehaviour
     }
     private void Flip()
     {
-        isFacingRight = !isFacingRight;
+        _isFacingRight = !_isFacingRight;
        Vector3 localScale = transform.localScale;
        localScale.x *= -1;
        transform.localScale = localScale;

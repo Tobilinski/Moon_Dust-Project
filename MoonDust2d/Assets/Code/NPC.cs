@@ -77,7 +77,7 @@ public class NPC : MonoBehaviour
 
     IEnumerator Typing()
     {
-        foreach (char letter in dialogue[index].ToCharArray())
+        foreach (char letter in dialogue[index])
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
