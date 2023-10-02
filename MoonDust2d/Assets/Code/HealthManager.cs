@@ -9,6 +9,8 @@ using UnityEngine.UI;
     [RequireComponent(typeof(AIDestinationSetter))]
 public class HealthManager : MonoBehaviour
 {
+    [Header("Soul health Variables")] [Space(10)]
+    public AIPath aipath;
     [Header("Soul health Variables")]
     [Space(10)]
     public float Health = 100f;
@@ -28,6 +30,14 @@ public class HealthManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             TakeDamage(10f);
+        }
+        if(aipath.desiredVelocity.x <= 0.01f)
+        {
+            transform.localScale = new Vector3(-1f,1f,1f);
+        }
+        else if(aipath.desiredVelocity.x >= 0.01f)
+        {
+            transform.localScale = new Vector3(1f,1f,1f);
         }
     }
     

@@ -9,7 +9,6 @@ public class Weapon : MonoBehaviour
     public AIPath[] _AIPath;
    private void OnTriggerEnter2D(Collider2D other)
    {
-       
        if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemyScript))
        {
            enemyScript.TakeDamage(10f);
@@ -26,7 +25,6 @@ public class Weapon : MonoBehaviour
    {
        _AIPath[0].maxSpeed = 1.5f;
        _AIPath[1].maxSpeed = 1.5f;
-       
    }
    void slowBabaSlow()
    {

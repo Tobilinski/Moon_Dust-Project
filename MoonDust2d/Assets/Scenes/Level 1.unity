@@ -33039,6 +33039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bbf70ba91a53bc4c86b35b1f983ea73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aipath: {fileID: 1906293886}
   Health: 100
   healthBar: {fileID: 1234817788}
   _attackRate: 3
@@ -38415,7 +38416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000011920929
+      value: -0.0000009536743
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38431,7 +38432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000011920929
+      value: -0.0000009536743
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
