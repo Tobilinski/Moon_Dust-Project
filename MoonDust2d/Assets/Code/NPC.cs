@@ -28,19 +28,23 @@ public class NPC : MonoBehaviour
     {
         if (_isInteracting && playerIsClose)
         {
+            _isInteracting = false;
             theButton.Select();
             if (dialoguePanel.activeInHierarchy)
             {
                 zeroText();
             }
-            else
+            else if (dialogueText.text == "")
             {
                 interactText.text = "";
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
-            } 
-            _isInteracting = false;
+            }
         }
+
+        
+
+        
 
         if (dialogueText.text == dialogue[index])
         {
@@ -77,10 +81,15 @@ public class NPC : MonoBehaviour
 
     IEnumerator Typing()
     {
+        
         foreach (char letter in dialogue[index])
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
+            if (!dialoguePanel.activeInHierarchy)
+            {
+                break;
+            }
         }
     }
     

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class FireBullets : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class FireBullets : MonoBehaviour
     
     public static int _UltimateAbCount = 0;
     public bool UltimateAttackBool;
-    
+    public Image CorruptionMeter;
    
 
     public void Fire()
@@ -44,6 +45,7 @@ public class FireBullets : MonoBehaviour
     private void Update()
     {
         UltimateAttack();
+        CorruptionMeter.fillAmount = _UltimateAbCount / 4f;
     }
 
     public void UltimateAttack()
