@@ -1,5 +1,6 @@
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
     
@@ -31,15 +32,16 @@ public class HealthManager : MonoBehaviour
         {
             TakeDamage(10f);
         }
-        if(aipath.desiredVelocity.x <= 0.01f)
-        {
-            transform.localScale = new Vector3(-1f,1f,1f);
-        }
-        else if(aipath.desiredVelocity.x >= 0.01f)
+        if(aipath.desiredVelocity.x >= 0.01f)
         {
             transform.localScale = new Vector3(1f,1f,1f);
         }
+        else if(aipath.desiredVelocity.x <= 0.01f)
+        {
+            transform.localScale = new Vector3(-1f,1f,1f);
+        }
     }
+    
     
     public void TakeDamage(float damage)
     {
@@ -47,7 +49,7 @@ public class HealthManager : MonoBehaviour
         healthBar.fillAmount = Health / 100f;
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     

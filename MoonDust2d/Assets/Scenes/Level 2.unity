@@ -12908,6 +12908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bbf70ba91a53bc4c86b35b1f983ea73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aipath: {fileID: 1109442643}
   Health: 100
   healthBar: {fileID: 468954877}
   _attackRate: 3
