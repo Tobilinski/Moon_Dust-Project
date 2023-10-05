@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 4102315895008179407}
   - component: {fileID: 5639185769791919895}
   - component: {fileID: 7728488355526344285}
+  - component: {fileID: 6395624256778316805}
   - component: {fileID: 3142519661541080888}
+  - component: {fileID: 6682683953448773102}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -132,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24f0a00692ef6242acf1218b8a2612f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SecretPlat: {fileID: 0}
   groundCheck: {fileID: 7157139888339170112}
   groundLayer:
     serializedVersion: 2
@@ -140,7 +143,6 @@ MonoBehaviour:
   jumpForce: 12
   animator: {fileID: 5639185769791919895}
   attackWeapon: {fileID: 3702989014436882609}
-  _Player: {fileID: 0}
 --- !u!61 &4102315895008179407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -282,10 +284,6 @@ MonoBehaviour:
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 315a0774-9e3d-49c2-8bde-ef0f2523b96a
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 1c2d98a3-e9c8-410b-9ccf-ac885028cc6f
     m_ActionName: UI/Point[/Mouse/position,/Pen/position]
   - m_PersistentCalls:
@@ -353,6 +351,102 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!82 &6395624256778316805
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275400528404621967}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &3142519661541080888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,9 +462,22 @@ MonoBehaviour:
   bulletAmount: 10
   startAngle: 0
   endAngle: 360
-  _UltimateAbCount: 1
-  MeleeAttackBool: 0
   UltimateAttackBool: 0
+  CorruptionMeter: {fileID: 0}
+--- !u!114 &6682683953448773102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275400528404621967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e061d8eac1e5a94997fb28487456d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 1256877fab01e264790043a90b534203, type: 3}
 --- !u!1 &3702989014436882609
 GameObject:
   m_ObjectHideFlags: 0

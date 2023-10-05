@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
        if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemyScript))
        {
            enemyScript.TakeDamage(10f);
-           print("damage taken from melee attack");
+           //print("damage taken from melee attack");
        }
        
        if(other.gameObject.CompareTag("SlowDown"))

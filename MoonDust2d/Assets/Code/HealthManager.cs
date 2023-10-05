@@ -20,6 +20,7 @@ public class HealthManager : MonoBehaviour
     private float _attackRate = 3f;
     private float _nextAttackTime;
     
+    
     private void Awake()
     {
         gameObject.tag = "Soul";

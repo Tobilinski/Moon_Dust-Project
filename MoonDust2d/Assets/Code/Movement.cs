@@ -58,6 +58,8 @@ public class Movement : MonoBehaviour
 
     private float _attackRate = 3f;
     private float _nextAttackTime;
+     
+    public SoundManager _soundManager;
   
    
     //////////////////////////////////////////////
@@ -119,13 +121,14 @@ public class Movement : MonoBehaviour
         }
        
         
-        
+        //melée attack
         if (MeleeAttackBool)
         {
             
             if(Time.time >= _nextAttackTime)
             {
                 _nextAttackTime = Time.time + 1f / _attackRate;
+                //_soundManager.MeleeSound();
                 attackWeapon.SetActive(true);
                 animator.SetBool("IsKilling", true);
                 Invoke(nameof(MeleeStop), 0.1f);
@@ -205,14 +208,13 @@ public class Movement : MonoBehaviour
         {
             IsMoving = false;
         }
-        
-        
     }
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.y,jumpForce);
+            _soundManager.JumpSound();
             //print("Jump");
         }
 

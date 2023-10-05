@@ -11,12 +11,7 @@ public class SoundManager : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void JumpSound()
     {
         _audioSource.PlayOneShot(audioClips[0]);
