@@ -124,7 +124,7 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Arrow.SetActive(true);
+            Arrow.SetActive(false);
             Cursor.visible = false;
             playerIsClose = false;
             zeroText();

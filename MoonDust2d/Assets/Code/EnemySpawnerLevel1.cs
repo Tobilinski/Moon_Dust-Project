@@ -56,8 +56,8 @@ public class EnemySpawnerLevel1 : MonoBehaviour
         }
         
     }
-
     
+
     IEnumerator Spawning1()
     {
         foreach (var number in EnemyWave1)
