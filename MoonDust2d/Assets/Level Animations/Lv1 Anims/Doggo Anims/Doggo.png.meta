@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bce5e2aa90ea958429b6bebe2bd58966
+guid: 2c1237c740e3be8438caefc392b24086
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 13
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 17
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -119,43 +119,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_0
+      name: Doggo_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 44
-        height: 61
+        x: 7
+        y: 4
+        width: 24
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3beb57b05935a548bab25761741f650
-      internalID: 694613995
+      spriteID: 4e6f558bbae33a14c8bb0c1aae7eebce
+      internalID: 1283437913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_1
+      name: Doggo_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 2
-        width: 41
-        height: 61
+        x: 39
+        y: 4
+        width: 24
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38776c57d19130e499bae0b9682b5fa8
-      internalID: -2140372375
+      spriteID: e447cf8a230505f43b966377be6acb27
+      internalID: -1414525200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doggo_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 4
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3f9d0210e869b45988c38ba437cef6
+      internalID: 1586657630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doggo_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 4
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e80a6a366e88214085a77dc13473d17
+      internalID: -54386739
       vertices: []
       indices: 
       edges: []
@@ -171,8 +213,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheet_0: 694613995
-      spritesheet_1: -2140372375
+      Doggo_0: 1283437913
+      Doggo_1: -1414525200
+      Doggo_2: 1586657630
+      Doggo_3: -54386739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
