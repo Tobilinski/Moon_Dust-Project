@@ -19825,6 +19825,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 870153575}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: _soundManager
+      value: 
+      objectReference: {fileID: 1665444750}
+    - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: RespawnPoints.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -20265,6 +20269,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b24f0a00692ef6242acf1218b8a2612f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1665444750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6574319372954743417, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+  m_PrefabInstance: {fileID: 1665444741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783558998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e061d8eac1e5a94997fb28487456d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1680124951

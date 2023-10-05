@@ -59,7 +59,7 @@ public class Movement : MonoBehaviour
     private float _attackRate = 3f;
     private float _nextAttackTime;
      
-    public SoundManager _soundManager;
+    private SoundManager _soundManager;
   
    
     //////////////////////////////////////////////
@@ -78,7 +78,8 @@ public class Movement : MonoBehaviour
 
 
     public void Awake()
-    { 
+    {
+        _soundManager = GetComponent<SoundManager>();
        Cursor.visible = false;
        rb = GetComponent<Rigidbody2D>();
        SecretPlat.SetActive(false);

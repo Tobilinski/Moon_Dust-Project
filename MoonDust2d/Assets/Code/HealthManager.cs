@@ -50,6 +50,7 @@ public class HealthManager : MonoBehaviour
         healthBar.fillAmount = Health / 100f;
         if (Health <= 0)
         {
+            FireBullets._UltimateAbCount = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
