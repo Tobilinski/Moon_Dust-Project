@@ -1,4 +1,6 @@
 // Date Created: 28/08/2023
+
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -17,8 +19,9 @@ public class NPC : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
     [Space(10)]
-    public TextMeshPro interactText;
     
+
+    public GameObject Arrow;
     private bool _isInteracting;
     private bool _nextLine;
     
@@ -36,7 +39,6 @@ public class NPC : MonoBehaviour
             }
             else if (dialogueText.text == "")
             {
-                interactText.text = "";
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
             }
@@ -71,6 +73,7 @@ public class NPC : MonoBehaviour
             _nextLine = false;
         }
     }
+    
 
     public void zeroText()
     {
@@ -112,7 +115,7 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            interactText.text = "Press E to interact";
+            Arrow.SetActive(true);
             Cursor.visible = true;
             playerIsClose = true;
         }
@@ -121,7 +124,7 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            interactText.text = "";
+            Arrow.SetActive(true);
             Cursor.visible = false;
             playerIsClose = false;
             zeroText();
