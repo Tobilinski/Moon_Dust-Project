@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
-{ public GameObject pauseMenuUI;
+{ 
+    public GameObject pauseMenuUI;
     public Button resumeButton;
     private bool isPaused = false;
     private AudioSource _audioSource;
@@ -39,7 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        Application.Quit();// Quit the game
         print("Quit");
     }
 
