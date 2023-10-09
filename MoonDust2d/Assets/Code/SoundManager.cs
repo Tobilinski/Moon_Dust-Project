@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -11,7 +8,7 @@ public class SoundManager : MonoBehaviour
         Silent,
         Jumping,
         Melee,
-        
+        Walking
     }
     
     private AudioSource _audioSource;
@@ -23,11 +20,7 @@ public class SoundManager : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
     }
-
-    private void Update()
-    {
-        SetState(currentState);
-    }
+    
 
     public void JumpSound()
     {
@@ -37,27 +30,27 @@ public class SoundManager : MonoBehaviour
     public void MeleeSound()
     {
         _audioSource.PlayOneShot(audioClips[1]);
+        SetState(SoundState.Silent);
     }
     public void WalkSound()
     {
         _audioSource.PlayOneShot(audioClips[2]);
+        SetState(SoundState.Silent);
     }
 
     public void SetState(SoundState newState)
     {
-        if (currentState != newState)
-        {
-            currentState = newState;
+        currentState = newState;
 
-            switch (currentState)
-            {
-                case SoundState.Jumping:
-                    JumpSound();
-                    break;
-                case SoundState.Melee:
-                    MeleeSound();
-                    break;
-            }
+        switch (currentState)
+        {
+            case SoundState.Jumping:
+                JumpSound();
+                break;
+            case SoundState.Melee:
+                MeleeSound();
+                break;
         }
     }
+    
 }
