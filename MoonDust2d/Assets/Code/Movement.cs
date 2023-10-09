@@ -215,9 +215,13 @@ public class Movement : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.y,jumpForce);
-            _soundManager.JumpSound();
+            if (_soundManager.currentState != SoundManager.SoundState.Jumping)
+            {
+                _soundManager.SetState(SoundManager.SoundState.Jumping);
+            }
             //print("Jump");
         }
+        
 
         if (context.canceled && rb.velocity.y >0f)
         {
