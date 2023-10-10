@@ -48,9 +48,11 @@ public class Movement : MonoBehaviour
     //Animation variables
     [Header("Animation Slot")]
     [Space(10)]
-    
+    //player animator
     public Animator animator;
-    
+    [Header("Elevator")]
+    [Space(10)]
+    public Animator animatorElevator;
     //Attack variables
     [Header("Attack Weapon slot")]
     [Space(10)]
@@ -87,7 +89,19 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        // checks kill counts and does something depending on which level you are on
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            switch (KillCount)
+            {
+                case 1:
+                    print("kill1");
+                    break;
+            }
+        }
        
+       
+        
         
         //Test if the player is on the ground
         //print(triggered);
@@ -178,6 +192,10 @@ public class Movement : MonoBehaviour
         else if (other.gameObject.CompareTag("NextLevel"))
         {
             SceneManager.LoadScene(sceneBuildIndex: +1);
+        }
+        else if (other.gameObject.CompareTag("ElevatorUp"))
+        {
+           animatorElevator.SetBool("IsUppieUp", true);
         }
     }
    

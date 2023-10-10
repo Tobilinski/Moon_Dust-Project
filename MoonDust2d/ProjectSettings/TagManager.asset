@@ -26,6 +26,7 @@ TagManager:
   - Respawn5
   - Respawn6
   - Respawn7
+  - ElevatorUp
   layers:
   - Default
   - TransparentFX

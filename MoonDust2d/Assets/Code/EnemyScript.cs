@@ -35,6 +35,7 @@ public class EnemyScript : MonoBehaviour
        CameraScript.Instance.ShakeCamera(4f, 0.1f);
        if(_health <= 0f)
        {
+           Movement.KillCount++;
            FireBullets._UltimateAbCount++;
            //print(FireBullets._UltimateAbCount);
            Destroy(gameObject);
