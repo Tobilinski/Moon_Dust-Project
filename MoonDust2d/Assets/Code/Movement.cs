@@ -53,7 +53,9 @@ public class Movement : MonoBehaviour
     public Animator animator;
     [Header("Elevator")]
     [Space(10)]
-    public Animator animatorElevator;
+    public Animator animatorElevator1;
+    public Animator animatorElevator2;
+    
     //Attack variables
     [Header("Attack Weapon slot")]
     [Space(10)]
@@ -195,21 +197,25 @@ public class Movement : MonoBehaviour
         {
             transform.position = newPosition;
         }
-        else if (other.gameObject.CompareTag("Secret"))
+        
+        switch (other.gameObject.tag)
         {
-            Invoke("SecretDoor", 5f);
-        }
-        else if (other.gameObject.CompareTag("NextLevel"))
-        {
-            SceneManager.LoadScene(sceneBuildIndex: +1);
-        }
-        else if (other.gameObject.CompareTag("ElevatorUp"))
-        {
-           animatorElevator.SetBool("IsUppieUp", true);
-        }
-        else if (other.gameObject.CompareTag("Section"))
-        {
-            Invoke("SectioningDoor", 11f);
+            case "Secret":
+                Invoke("SecretDoor", 5f);
+                break;
+            case "NextLevel":
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                break;
+            case "ElevatorUp":
+                animatorElevator2.SetTrigger("IsUppieUp");
+                break;
+            case "ElevatorDown":
+                animatorElevator1.SetTrigger("IsDown");
+                break;
+            case "Section":
+                Invoke("SectioningDoor", 11f);
+                break;
+            
         }
         
     }

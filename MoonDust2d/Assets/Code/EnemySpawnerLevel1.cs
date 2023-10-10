@@ -30,31 +30,28 @@ public class EnemySpawnerLevel1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Spawner1")
+        switch (other.gameObject.tag)
         {
-            StartCoroutine(Spawning1());
+            case "Spawner1":
+                StartCoroutine(Spawning1());
+                break;
+            case "Spawner2":
+                StartCoroutine(Spawning2());
+                break;
+            case "Spawner3":
+                StartCoroutine(Spawning3());
+                break;
+            case "Spawner4":
+                StartCoroutine(Spawning4());
+                break;
+            case "Spawner5":
+                StartCoroutine(Spawning5());
+                break;
+            case "Spawner6":
+                StartCoroutine(Spawning6());
+                break;
         }
-        if (other.gameObject.tag == "Spawner2")
-        {
-            StartCoroutine(Spawning2());
-        }
-        if (other.gameObject.tag == "Spawner3")
-        {
-            StartCoroutine(Spawning3());
-        }
-        if (other.gameObject.tag == "Spawner4")
-        {
-            StartCoroutine(Spawning4());
-        }
-        if (other.gameObject.tag == "Spawner5")
-        {
-            StartCoroutine(Spawning5());
-        }
-        if (other.gameObject.tag == "Spawner6")
-        {
-            StartCoroutine(Spawning6());
-        }
-        
+
     }
     
 
