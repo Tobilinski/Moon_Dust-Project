@@ -7,8 +7,6 @@ TagManager:
   - Platform
   - Enemy
   - Soul
-  - Enemy1
-  - Enemy2
   - SlowDown
   - Respawn1
   - Respawn2
@@ -27,6 +25,7 @@ TagManager:
   - Respawn6
   - Respawn7
   - ElevatorUp
+  - Section
   layers:
   - Default
   - TransparentFX

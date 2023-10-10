@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     [Header("Secret Ramp")]
     [Space(10)]
     public GameObject SecretPlat;
+    public GameObject[] killWalls;
 
     [Space(10)]
     public static bool MeleeAttackBool;
@@ -81,24 +82,25 @@ public class Movement : MonoBehaviour
 
     public void Awake()
     {
+        KillCount = 0;
         _soundManager = GetComponent<SoundManager>();
-       Cursor.visible = false;
-       rb = GetComponent<Rigidbody2D>();
-       SecretPlat.SetActive(false);
+        Cursor.visible = false;
+        rb = GetComponent<Rigidbody2D>();
+        SecretPlat.SetActive(false);
     }
     // Update is called once per frame
     public void Update()
     {
         // checks kill counts and does something depending on which level you are on
-        if (SceneManager.GetActiveScene().name == "Level1")
+        if (SceneManager.GetActiveScene().name == "Level 1" && KillCount == 14)
         {
-            switch (KillCount)
-            {
-                case 1:
-                    print("kill1");
-                    break;
-            }
+            killCountDoor();
         }
+        if (SceneManager.GetActiveScene().name == "Level 2" && KillCount == 20)
+        {
+            killCountDoor();
+        }
+        
        
        
         
@@ -143,7 +145,7 @@ public class Movement : MonoBehaviour
             if(Time.time >= _nextAttackTime)
             {
                 _nextAttackTime = Time.time + 1f / _attackRate;
-                //_soundManager.MeleeSound();
+                //melee sound goes here
                 attackWeapon.SetActive(true);
                 animator.SetBool("IsKilling", true);
                 Invoke(nameof(MeleeStop), 0.1f);
@@ -156,7 +158,15 @@ public class Movement : MonoBehaviour
             animator.SetBool("IsKilling", false);
         }
     }
+    private void killCountDoor()
+    {
+        killWalls[0].SetActive(false);
+    }
 
+    private void SectioningDoor()
+    {
+        killWalls[1].SetActive(false);
+    }
     public void MeleeStop()  
     {
         MeleeAttackBool = false;
@@ -197,8 +207,14 @@ public class Movement : MonoBehaviour
         {
            animatorElevator.SetBool("IsUppieUp", true);
         }
+        else if (other.gameObject.CompareTag("Section"))
+        {
+            Invoke("SectioningDoor", 11f);
+        }
+        
     }
-   
+
+    
     
     private void SecretDoor()
     {
