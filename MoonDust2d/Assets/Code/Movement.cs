@@ -103,10 +103,7 @@ public class Movement : MonoBehaviour
         {
             killCountDoor();
         }
-        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 20)
-        {
-            killCountDoor();
-        }
+       
         if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 11)
         {
             killWalls[0].SetActive(false);
@@ -119,7 +116,10 @@ public class Movement : MonoBehaviour
         {
             killWalls[2].SetActive(false);
         }
-        
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 22)
+        {
+            killCountDoor();
+        }
        
        
         

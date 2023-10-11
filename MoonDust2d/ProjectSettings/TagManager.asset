@@ -30,6 +30,7 @@ TagManager:
   - Section2
   - Section3
   - Section4
+  - Spawner7
   layers:
   - Default
   - TransparentFX
