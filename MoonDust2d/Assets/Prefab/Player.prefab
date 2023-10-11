@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SecretPlat: {fileID: 0}
+  killWalls: []
   groundCheck: {fileID: 7157139888339170112}
   groundLayer:
     serializedVersion: 2
@@ -143,6 +144,8 @@ MonoBehaviour:
   speed: 8
   jumpForce: 12
   animator: {fileID: 5639185769791919895}
+  animatorElevator1: {fileID: 0}
+  animatorElevator2: {fileID: 0}
   attackWeapon: {fileID: 3702989014436882609}
 --- !u!61 &4102315895008179407
 BoxCollider2D:
@@ -347,6 +350,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b2a69586-f2b0-4aed-bd16-168b453658dd
     m_ActionName: Player/Ultimate ability[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8044453190942170077}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: PauseButtonInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9c131de5-55f4-45ce-a96d-83e2753fb56b
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -479,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 1256877fab01e264790043a90b534203, type: 3}
+  currentState: 0
 --- !u!114 &8044453190942170077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb642ab027d06048ad98299e920f4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  resumeButton: {fileID: 0}
 --- !u!1 &3702989014436882609
 GameObject:
   m_ObjectHideFlags: 0
