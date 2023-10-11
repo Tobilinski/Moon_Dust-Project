@@ -102,6 +102,10 @@ public class Movement : MonoBehaviour
         {
             killCountDoor();
         }
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 20)
+        {
+            killCountDoor();
+        }
         
        
        
