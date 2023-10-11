@@ -25,6 +25,9 @@ public class EnemySpawnerLevel1 : MonoBehaviour
     [Header("Wave Five")]
     [Space(10)]
     public GameObject[] EnemyWave5;
+    [Header("Wave Five")]
+    [Space(10)]
+    public GameObject[] EnemyWave6;
     // Start is called before the first frame update
    
 
@@ -49,6 +52,9 @@ public class EnemySpawnerLevel1 : MonoBehaviour
                 break;
             case "Spawner6":
                 StartCoroutine(Spawning6());
+                break;
+            case "Spawner7":
+                StartCoroutine(Spawning7());
                 break;
         }
 
@@ -99,6 +105,14 @@ public class EnemySpawnerLevel1 : MonoBehaviour
     IEnumerator Spawning6()
     {
         foreach (var number in EnemyWave5)
+        {
+            number.SetActive(true);
+            yield return new WaitForSeconds(SpawnSpeed);
+        }
+    }
+    IEnumerator Spawning7()
+    {
+        foreach (var number in EnemyWave6)
         {
             number.SetActive(true);
             yield return new WaitForSeconds(SpawnSpeed);

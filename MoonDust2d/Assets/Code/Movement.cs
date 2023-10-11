@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
     [Space(10)]
     public GameObject SecretPlat;
     public GameObject[] killWalls;
+    public GameObject Endwall;
 
     [Space(10)]
     public static bool MeleeAttackBool;
@@ -106,6 +107,18 @@ public class Movement : MonoBehaviour
         {
             killCountDoor();
         }
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 11)
+        {
+            killWalls[0].SetActive(false);
+        }
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 14)
+        {
+            killWalls[1].SetActive(false);
+        }
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 18)
+        {
+            killWalls[2].SetActive(false);
+        }
         
        
        
@@ -166,12 +179,12 @@ public class Movement : MonoBehaviour
     }
     private void killCountDoor()
     {
-        killWalls[0].SetActive(false);
+        Endwall.SetActive(false);
     }
 
-    private void SectioningDoor()
+    private void SectioningDoor1()
     {
-        killWalls[1].SetActive(false);
+        killWalls[0].SetActive(false);
     }
     public void MeleeStop()  
     {
@@ -217,9 +230,8 @@ public class Movement : MonoBehaviour
                 animatorElevator1.SetTrigger("IsDown");
                 break;
             case "Section":
-                Invoke("SectioningDoor", 11f);
+                Invoke("SectioningDoor1", 11f);
                 break;
-            
         }
         
     }

@@ -43837,6 +43837,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: Endwall
+      value: 
+      objectReference: {fileID: 738462262}
+    - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: _Player
       value: 
       objectReference: {fileID: 2652538323279272576}
@@ -43858,7 +43862,7 @@ PrefabInstance:
       objectReference: {fileID: 8880814914238572329}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: killWalls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: killWalls.Array.data[0]
