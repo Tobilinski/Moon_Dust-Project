@@ -14,7 +14,7 @@ public class HealthOrb : MonoBehaviour
     {
         if (_isInteracting && _isClose && _healthManager.Health < 100f)
         {
-            _healthManager.Heal(10f);
+            _healthManager.Heal(20f);
             print(_healthManager.Health);
             Destroy(gameObject);
         }

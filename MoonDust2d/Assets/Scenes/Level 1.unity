@@ -45345,6 +45345,7 @@ MonoBehaviour:
   - {fileID: 435478521}
   EnemyWave4: []
   EnemyWave5: []
+  EnemyWave6: []
 --- !u!4 &8880814914238572321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1842254864452996265, guid: 922e4942781d0b9449140262cb8607de, type: 3}
