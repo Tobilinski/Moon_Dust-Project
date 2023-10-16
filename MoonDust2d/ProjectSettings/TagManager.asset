@@ -31,6 +31,11 @@ TagManager:
   - Section3
   - Section4
   - Spawner7
+  - Respawn8
+  - Respawn9
+  - Respawn10
+  - Respawn11
+  - Respawn12
   layers:
   - Default
   - TransparentFX

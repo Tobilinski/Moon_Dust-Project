@@ -78,7 +78,13 @@ public class Movement : MonoBehaviour
         {"Respawn4", new Vector2(545.37f, 29.79f)},
         {"Respawn5", new Vector2(8.5f, -51.7f)},
         {"Respawn6", new Vector2(46.9f, -31.7f)},
-        {"Respawn7", new Vector2(179.8f, -35.7f)}
+        {"Respawn7", new Vector2(179.8f, -35.7f)},
+        {"Respawn8", new Vector2(16.01f, -0.95f)},
+        {"Respawn9", new Vector2(49.1f, -6.5f)},
+        {"Respawn10", new Vector2(36.7f, -19f)},
+        {"Respawn11", new Vector2(36.6f, -30.5f)},
+        {"Respawn12", new Vector2(41.9f, -43f)}
+        
     };
     
 
