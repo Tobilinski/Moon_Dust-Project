@@ -25,11 +25,13 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0f; // Pause the game
             pauseMenuUI.SetActive(true);
             resumeButton.Select();
+            Cursor.visible = true;
         }
         else
         {
             Time.timeScale = 1f; // Resume the game
             pauseMenuUI.SetActive(false);
+            Cursor.visible = false;
         }
     }
 
