@@ -17,7 +17,12 @@ public class FireBullets : MonoBehaviour
     public static int _UltimateAbCount = 0;
     public bool UltimateAttackBool;
     public Image CorruptionMeter;
-   
+    private SoundManager _soundManager;
+
+    private void Start()
+    {
+        _soundManager = FindObjectOfType<SoundManager>();
+    }
 
     public void Fire()
     {
@@ -40,6 +45,7 @@ public class FireBullets : MonoBehaviour
             
             angle += angleStep;
         }
+        _soundManager.UltimateSound();
     }
 
     private void Update()

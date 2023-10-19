@@ -1,4 +1,5 @@
 using Pathfinding;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -40,6 +41,11 @@ public class HealthManager : MonoBehaviour
         else if(aipath.desiredVelocity.x <= 0.01f)
         {
             transform.localScale = new Vector3(-1f,1f,1f);
+        }
+
+        if (Health > 100)
+        {
+            Health = 100;
         }
     }
     

@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 30
-  Hit: {fileID: 8300000, guid: 9f74b58df5c3f4c488af82e43196882a, type: 3}
+  Hit: {fileID: 8300000, guid: 5eedaee25ddcb3749b8e9fe0fe96ded9, type: 3}
 --- !u!82 &2065198963365409232
 AudioSource:
   m_ObjectHideFlags: 0

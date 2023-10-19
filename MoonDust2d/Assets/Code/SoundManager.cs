@@ -38,11 +38,16 @@ public class SoundManager : MonoBehaviour
     {
         _audioSource.Pause();
     }
-    private void HitSound()
+    
+    public void HealSound()
     {
         _audioSource.PlayOneShot(audioClips[3]);
     }
 
+    public void UltimateSound()
+    {
+        _audioSource.PlayOneShot(audioClips[4]);
+    }
 
 
 
