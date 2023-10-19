@@ -14,7 +14,7 @@ public class FireBullets : MonoBehaviour
     
     private Vector2 bulletMoveDirection;
     
-    public static int _UltimateAbCount = 0;
+    public static int _UltimateAbCount = 4;
     public bool UltimateAttackBool;
     public Image CorruptionMeter;
     private SoundManager _soundManager;
@@ -57,7 +57,7 @@ public class FireBullets : MonoBehaviour
     public void UltimateAttack()
     {
         
-        if (UltimateAttackBool && Movement.MeleeAttackBool && _UltimateAbCount >= 4 )
+        if (UltimateAttackBool && Movement.MeleeAttackBool && _UltimateAbCount >= 4)
         {
             //print("Ultimate Attack"); 
             Fire();

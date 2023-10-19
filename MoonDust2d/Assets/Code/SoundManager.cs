@@ -5,15 +5,16 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
    
-    
-    private AudioSource _audioSource;
+   
+    public AudioSource _audioSourceWalk;
+    public AudioSource _audioSource;
     public AudioClip[] audioClips;
     
     
     // Start is called before the first frame update
     void Awake()
     {
-        _audioSource = GetComponent<AudioSource>();
+       
     }
     
 
@@ -29,14 +30,14 @@ public class SoundManager : MonoBehaviour
 
     public void WalkSound()
     {
-        _audioSource.clip = audioClips[2];
-        _audioSource.loop = true;
-        _audioSource.Play();
+        _audioSourceWalk.clip = audioClips[2];
+        _audioSourceWalk.loop = true;
+        _audioSourceWalk.Play();
     }
 
     public void StopWalkSound()
     {
-        _audioSource.Pause();
+        _audioSourceWalk.Pause();
     }
     
     public void HealSound()

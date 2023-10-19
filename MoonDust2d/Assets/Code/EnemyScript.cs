@@ -10,6 +10,7 @@ public class EnemyScript : MonoBehaviour
     private Animator _animator;
     private AIPath _aiPath;
     public AudioClip Hit;
+    public AudioClip SoulHit;
     private AudioSource _audioSource;
     private void Start()
     {
@@ -50,14 +51,28 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Soul"))
         {
+            InvokeRepeating("enemyAttackingSound",0.1f,0.48f);
             _animator.SetBool("isAttacking", true);
         }
     }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Soul"))
+        {
+            //InvokeRepeating("enemyAttackingSound",1f,0.1f);
+        }
+    }
+
+    void enemyAttackingSound()
+    {
+        _audioSource.PlayOneShot(SoulHit);
+    }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Soul"))
         {
+            CancelInvoke("enemyAttackingSound");
             _animator.SetBool("isAttacking", false);
         }
     }
