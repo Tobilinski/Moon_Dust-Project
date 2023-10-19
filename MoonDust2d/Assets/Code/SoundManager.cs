@@ -1,20 +1,15 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public enum  SoundState
-    {
-        Silent,
-        Jumping,
-        Melee,
-        Walking
-    }
+   
     
     private AudioSource _audioSource;
     public AudioClip[] audioClips;
     
-    public SoundState currentState;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,32 +20,30 @@ public class SoundManager : MonoBehaviour
     public void JumpSound()
     {
         _audioSource.PlayOneShot(audioClips[0]);
-        SetState(SoundState.Silent);
     }
     public void MeleeSound()
     {
         _audioSource.PlayOneShot(audioClips[1]);
-        SetState(SoundState.Silent);
-    }
-    public void WalkSound()
-    {
-        _audioSource.PlayOneShot(audioClips[2]);
-        SetState(SoundState.Silent);
-    }
-
-    public void SetState(SoundState newState)
-    {
-        currentState = newState;
-
-        switch (currentState)
-        {
-            case SoundState.Jumping:
-                JumpSound();
-                break;
-            case SoundState.Melee:
-                MeleeSound();
-                break;
-        }
     }
     
+
+    public void WalkSound()
+    {
+        _audioSource.clip = audioClips[2];
+        _audioSource.loop = true;
+        _audioSource.Play();
+    }
+
+    public void StopWalkSound()
+    {
+        _audioSource.Pause();
+    }
+    private void HitSound()
+    {
+        _audioSource.PlayOneShot(audioClips[3]);
+    }
+
+
+
+
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
@@ -9,6 +10,13 @@ public class HealthOrb : MonoBehaviour
     private HealthManager _healthManager;
     private bool _isInteracting;
 
+    private SoundManager _soundManager;
+
+    private void Start()
+    {
+        _soundManager = FindObjectOfType<SoundManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +26,7 @@ public class HealthOrb : MonoBehaviour
             print(_healthManager.Health);
             Destroy(gameObject);
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

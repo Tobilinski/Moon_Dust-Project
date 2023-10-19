@@ -6,6 +6,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+
+[RequireComponent(typeof(AudioSource))]
 public class NPC : MonoBehaviour
 {
     [Header("Dialogue Variables")]
@@ -24,11 +26,13 @@ public class NPC : MonoBehaviour
     public GameObject Arrow;
     private bool _isInteracting;
     private bool _nextLine;
-    
+    //Audio source
+    private AudioSource _audiosource;
     public Button theButton;
     // Update is called once per frame
     void Update()
     {
+        _audiosource = GetComponent<AudioSource>();
         if (_isInteracting && playerIsClose)
         {
             _isInteracting = false;
@@ -115,6 +119,7 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            _audiosource.Play();
             Arrow.SetActive(true);
             Cursor.visible = true;
             playerIsClose = true;

@@ -9,8 +9,11 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]  private float _maxHealth = 30f;
     private Animator _animator;
     private AIPath _aiPath;
+    public AudioClip Hit;
+    private AudioSource _audioSource;
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _aiPath = GetComponent<AIPath>();
         _animator = GetComponentInChildren<Animator>();
        _health = _maxHealth;
@@ -32,6 +35,7 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage(float damageAmount)
    {
        _health -= damageAmount;
+       _audioSource.PlayOneShot(Hit);
        CameraScript.Instance.ShakeCamera(4f, 0.1f);
        if(_health <= 0f)
        {

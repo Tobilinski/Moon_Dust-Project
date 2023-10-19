@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
     
     //physics variables
     private Rigidbody2D rb;
-    
+    private bool _isJumping;
     
     //Grounded variables
     private bool _triggered;
@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour
 
     private float _attackRate = 3f;
     private float _nextAttackTime;
-     
+     //Sound script variable
     private SoundManager _soundManager;
   
    
@@ -126,8 +126,8 @@ public class Movement : MonoBehaviour
         {
             killCountDoor();
         }
-       
-       
+
+
         
         
         //Test if the player is on the ground
@@ -142,8 +142,9 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("IsJumping", true);
         }
-        
+        //Makes the player Mover Lol
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        
         if (!_isFacingRight && horizontal > 0f)
         {
             Flip();
@@ -171,6 +172,7 @@ public class Movement : MonoBehaviour
             {
                 _nextAttackTime = Time.time + 1f / _attackRate;
                 //melee sound goes here
+                _soundManager.MeleeSound();
                 attackWeapon.SetActive(true);
                 animator.SetBool("IsKilling", true);
                 Invoke(nameof(MeleeStop), 0.1f);
@@ -265,10 +267,12 @@ public class Movement : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
         if (context.performed)
         {
+            _soundManager.WalkSound();
             IsMoving = true;
         }
         else if (context.canceled)
         {
+            _soundManager.StopWalkSound();
             IsMoving = false;
         }
     }
@@ -276,11 +280,9 @@ public class Movement : MonoBehaviour
     {
         if (context.performed && IsGrounded())
         {
+            _isJumping =true;
             rb.velocity = new Vector2(rb.velocity.y,jumpForce);
-            if (_soundManager.currentState != SoundManager.SoundState.Jumping)
-            {
-                _soundManager.SetState(SoundManager.SoundState.Jumping);
-            }
+           _soundManager.JumpSound();
             //print("Jump");
         }
         
@@ -289,6 +291,7 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y * 0.1f);
             //print("Jump");
+            _isJumping = false;
         }
        
     }
