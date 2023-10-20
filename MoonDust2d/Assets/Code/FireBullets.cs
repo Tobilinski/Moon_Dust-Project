@@ -18,10 +18,11 @@ public class FireBullets : MonoBehaviour
     public bool UltimateAttackBool;
     public Image CorruptionMeter;
     private SoundManager _soundManager;
-
+    private ParticleSystem particleSystem;
     private void Start()
     {
         _soundManager = FindObjectOfType<SoundManager>();
+        particleSystem = GetComponent<ParticleSystem>();
     }
 
     public void Fire()
@@ -52,6 +53,14 @@ public class FireBullets : MonoBehaviour
     {
         UltimateAttack();
         CorruptionMeter.fillAmount = _UltimateAbCount / 4f;
+        if (_UltimateAbCount >= 4)
+        {
+            particleSystem.Play();
+        }
+        else
+        {
+            particleSystem.Stop();
+        }
     }
 
     public void UltimateAttack()

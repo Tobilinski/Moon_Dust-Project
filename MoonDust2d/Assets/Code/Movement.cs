@@ -1,6 +1,7 @@
 // Date Created: 28/08/2023
 
 using System.Collections.Generic;
+using Pathfinding.Util;
 using UnityEngine;
 using Cursor = UnityEngine.Cursor;
 using UnityEngine.InputSystem;
@@ -67,7 +68,7 @@ public class Movement : MonoBehaviour
      //Sound script variable
     private SoundManager _soundManager;
   
-   
+    
     //////////////////////////////////////////////
 
     private Dictionary<string, Vector2> _respawnPositions = new Dictionary<string, Vector2>()
@@ -252,8 +253,9 @@ public class Movement : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
     }
+    
     private void Flip()
     {
         _isFacingRight = !_isFacingRight;
