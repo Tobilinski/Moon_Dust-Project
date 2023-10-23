@@ -16,10 +16,10 @@ GameObject:
   - component: {fileID: 5639185769791919895}
   - component: {fileID: 7728488355526344285}
   - component: {fileID: 6395624256778316805}
+  - component: {fileID: 7581272271389776244}
   - component: {fileID: 3142519661541080888}
   - component: {fileID: 6682683953448773102}
   - component: {fileID: 8044453190942170077}
-  - component: {fileID: 7581272271389776244}
   - component: {fileID: 5313293669248273200}
   - component: {fileID: 6714775652062199818}
   m_Layer: 0
@@ -45,7 +45,7 @@ Transform:
   - {fileID: 7157139888339170112}
   - {fileID: 1423899929883390280}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8598114657747951499
 SpriteRenderer:
@@ -471,53 +471,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3142519661541080888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275400528404621967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletAmount: 10
-  startAngle: 0
-  endAngle: 360
-  UltimateAttackBool: 0
-  CorruptionMeter: {fileID: 0}
---- !u!114 &6682683953448773102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275400528404621967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e061d8eac1e5a94997fb28487456d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioSourceWalk: {fileID: 6395624256778316805}
-  _audioSource: {fileID: 7581272271389776244}
-  audioClips:
-  - {fileID: 8300000, guid: 1256877fab01e264790043a90b534203, type: 3}
---- !u!114 &8044453190942170077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275400528404621967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb642ab027d06048ad98299e920f4a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  resumeButton: {fileID: 0}
 --- !u!82 &7581272271389776244
 AudioSource:
   m_ObjectHideFlags: 0
@@ -614,6 +567,55 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3142519661541080888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275400528404621967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletAmount: 10
+  startAngle: 0
+  endAngle: 360
+  UltimateAttackBool: 0
+  CorruptionMeter: {fileID: 0}
+--- !u!114 &6682683953448773102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275400528404621967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e061d8eac1e5a94997fb28487456d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSourceWalk: {fileID: 6395624256778316805}
+  _audioSource: {fileID: 7581272271389776244}
+  audioClips:
+  - {fileID: 8300000, guid: 1256877fab01e264790043a90b534203, type: 3}
+--- !u!114 &8044453190942170077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275400528404621967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb642ab027d06048ad98299e920f4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  resumeButton: {fileID: 0}
+  _audioSource1: {fileID: 6395624256778316805}
+  _audioSource2: {fileID: 7581272271389776244}
 --- !u!198 &5313293669248273200
 ParticleSystem:
   m_ObjectHideFlags: 0

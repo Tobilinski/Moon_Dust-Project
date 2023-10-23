@@ -29,6 +29,7 @@ public class NPC : MonoBehaviour
     //Audio source
     private AudioSource _audiosource;
     public Button theButton;
+    
     // Update is called once per frame
     void Update()
     {

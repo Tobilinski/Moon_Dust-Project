@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
@@ -7,14 +8,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public Button resumeButton;
     private bool isPaused = false;
-    private AudioSource _audioSource;
+    public AudioSource _audioSource1;
+    public AudioSource _audioSource2;
+    private AudioSource _audioSourceSoul;
     void Start()
     {
         // Hide the pause menu at the start of the game
         pauseMenuUI.SetActive(false);
-        _audioSource = GetComponent<AudioSource>();
+        _audioSourceSoul = GameObject.Find("Soul").GetComponent<AudioSource>();
     }
-    
+
+   
 
     public void TogglePauseMenu()
     {
@@ -53,8 +57,16 @@ public class PauseMenu : MonoBehaviour
             TogglePauseMenu();
         }
     }
-    public void SetSoundVolume(float volume)
+    public void SetSoundVolume1(float volume)
     {
-        _audioSource.volume = volume;
+        _audioSource1.volume = volume;
+    }
+    public void SetSoundVolume2(float volume)
+    {
+        _audioSource2.volume = volume;
+    }
+    public void SetSoundVolume3(float volume)
+    {
+        _audioSourceSoul.volume = volume / 2;
     }
 }

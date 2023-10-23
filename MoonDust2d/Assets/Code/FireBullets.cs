@@ -14,7 +14,7 @@ public class FireBullets : MonoBehaviour
     
     private Vector2 bulletMoveDirection;
     
-    public static int _UltimateAbCount = 4;
+    public static int _UltimateAbCount = 0;
     public bool UltimateAttackBool;
     public Image CorruptionMeter;
     private SoundManager _soundManager;

@@ -20,11 +20,13 @@ public class SoundManager : MonoBehaviour
 
     public void JumpSound()
     {
-        _audioSource.PlayOneShot(audioClips[0]);
+        _audioSource.clip = audioClips[0];
+        _audioSource.Play();
     }
     public void MeleeSound()
     {
-        _audioSource.PlayOneShot(audioClips[1]);
+        _audioSource.clip = audioClips[1];
+        _audioSource.Play();
     }
     
 
