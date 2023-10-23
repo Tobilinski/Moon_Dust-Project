@@ -31854,32 +31854,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8880814914238572330}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: SetSoundVolume1
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8880814914238572330}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: SetSoundVolume2
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8880814914238572330}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: SetSoundVolume3
-        m_Mode: 0
+        m_MethodName: AudioGlobal
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -40713,6 +40689,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!82 &2013889128 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2160006571576825741, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+  m_PrefabInstance: {fileID: 3674254008893515672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2026046426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43773,7 +43754,7 @@ PrefabInstance:
     - target: {fileID: 6574319372954743417, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: _audioSource
       value: 
-      objectReference: {fileID: 8880814914238572331}
+      objectReference: {fileID: 2013889128}
     - target: {fileID: 6574319372954743417, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: _audioSourceWalk
       value: 
@@ -43847,6 +43828,10 @@ PrefabInstance:
       value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 7503743046378736714, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: Vslider
+      value: 
+      objectReference: {fileID: 1560364551}
+    - target: {fileID: 7503743046378736714, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1436484592}
@@ -43857,11 +43842,11 @@ PrefabInstance:
     - target: {fileID: 7503743046378736714, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: _audioSource1
       value: 
-      objectReference: {fileID: 8880814914238572348}
+      objectReference: {fileID: 8880814914238572331}
     - target: {fileID: 7503743046378736714, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: _audioSource2
       value: 
-      objectReference: {fileID: 8880814914238572331}
+      objectReference: {fileID: 2013889128}
     - target: {fileID: 7503743046378736714, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: _audioSourceSoul
       value: 
@@ -44310,6 +44295,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7977867202241957603, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8481130363271338652, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -44330,7 +44319,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7977867202241957603, guid: 922e4942781d0b9449140262cb8607de, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8726400805407096380, guid: 922e4942781d0b9449140262cb8607de, type: 3}
     m_AddedGameObjects: []
@@ -50372,11 +50362,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!82 &8880814914238572348 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7977867202241957603, guid: 922e4942781d0b9449140262cb8607de, type: 3}
-  m_PrefabInstance: {fileID: 3674254008893515672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8893110049323733811
 GameObject:
   m_ObjectHideFlags: 0

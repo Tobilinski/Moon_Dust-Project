@@ -22,11 +22,13 @@ public class SoundManager : MonoBehaviour
     {
         _audioSource.clip = audioClips[0];
         _audioSource.Play();
+        _audioSource.loop = false;
     }
     public void MeleeSound()
     {
         _audioSource.clip = audioClips[1];
         _audioSource.Play();
+        _audioSource.loop = false;
     }
     
 
@@ -40,6 +42,7 @@ public class SoundManager : MonoBehaviour
     public void StopWalkSound()
     {
         _audioSourceWalk.Pause();
+        _audioSource.loop = false;
     }
     
     public void HealSound()
@@ -52,6 +55,9 @@ public class SoundManager : MonoBehaviour
         _audioSource.PlayOneShot(audioClips[4]);
     }
 
-
+    private void StopSound()
+    {
+        _audioSource.Stop();
+    }
 
 }

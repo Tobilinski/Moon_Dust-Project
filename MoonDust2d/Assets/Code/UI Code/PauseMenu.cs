@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class PauseMenu : MonoBehaviour
 { 
@@ -11,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     public AudioSource _audioSource1;
     public AudioSource _audioSource2;
     private AudioSource _audioSourceSoul;
+    public Slider Vslider;
     void Start()
     {
         // Hide the pause menu at the start of the game
@@ -57,16 +59,29 @@ public class PauseMenu : MonoBehaviour
             TogglePauseMenu();
         }
     }
-    public void SetSoundVolume1(float volume)
+    public void AudioGlobal()
     {
-        _audioSource1.volume = volume;
+        AudioListener.volume = Vslider.value;
+        Save();
     }
-    public void SetSoundVolume2(float volume)
+
+    void start()
     {
-        _audioSource2.volume = volume;
+        if (!PlayerPrefs.HasKey("musicVolume"))
+        {
+            PlayerPrefs.SetFloat("musicVolume", 1f);
+        }
+        else
+        {
+            Load();
+        }
     }
-    public void SetSoundVolume3(float volume)
+    private void Load()
     {
-        _audioSourceSoul.volume = volume / 2;
+        Vslider.value = PlayerPrefs.GetFloat("musicVolume");
+    }
+    private void Save()
+    {
+        PlayerPrefs.SetFloat("musicVolume", Vslider.value);
     }
 }
