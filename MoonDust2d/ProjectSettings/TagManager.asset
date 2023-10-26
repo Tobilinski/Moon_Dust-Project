@@ -36,6 +36,10 @@ TagManager:
   - Respawn10
   - Respawn11
   - Respawn12
+  - Respawn13
+  - Respawn14
+  - Respawn15
+  - Respawn16
   layers:
   - Default
   - TransparentFX
