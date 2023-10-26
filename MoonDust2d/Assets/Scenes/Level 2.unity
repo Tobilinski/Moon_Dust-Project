@@ -53986,6 +53986,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665444750}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: SecretDoorTimed
+      value: 
+      objectReference: {fileID: 1727501710}
+    - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: animatorElevator
       value: 
       objectReference: {fileID: 630878009}
@@ -53999,7 +54003,7 @@ PrefabInstance:
       objectReference: {fileID: 630878009}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: killWalls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: killWalls.Array.data[0]

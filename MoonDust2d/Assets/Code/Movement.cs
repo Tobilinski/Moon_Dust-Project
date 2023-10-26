@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     public GameObject SecretPlat;
     public GameObject[] killWalls;
     public GameObject Endwall;
+    public GameObject SecretDoorTimed;
 
     [Space(10)]
     public static bool MeleeAttackBool;
@@ -127,8 +128,25 @@ public class Movement : MonoBehaviour
         {
             killCountDoor();
         }
+        
+        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 3)
+        {
+            killWalls[0].SetActive(false);
+        }
+        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 7)
+        {
+            killWalls[1].SetActive(false);
+        }
+        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 11)
+        {
+            killWalls[2].SetActive(false);
+        }
+        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 18)
+        {
+            killCountDoor();
+        }
 
-
+        /////////////////////// MACH DAS CODE BESSER OBEN
         
         
         //Test if the player is on the ground
@@ -193,7 +211,7 @@ public class Movement : MonoBehaviour
 
     private void SectioningDoor1()
     {
-        killWalls[0].SetActive(false);
+        SecretDoorTimed.SetActive(false);
     }
     public void MeleeStop()  
     {
