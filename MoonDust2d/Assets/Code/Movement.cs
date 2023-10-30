@@ -151,7 +151,7 @@ public class Movement : MonoBehaviour
             killCountDoor();
         }
 
-        /////////////////////// MACH DAS CODE BESSER OBEN
+        /////////////////////// MACH DAS CODE OBEN BESSER !!!
         
         
         //Test if the player is on the ground

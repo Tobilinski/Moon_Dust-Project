@@ -35,7 +35,7 @@ public class HealthOrb : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             _isClose = true;
-            interactText.text = "Press E to pick up";
+            interactText.text = "Press E / Button West to pick up";
         }
     }
 

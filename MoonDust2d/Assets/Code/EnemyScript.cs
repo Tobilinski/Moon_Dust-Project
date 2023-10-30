@@ -1,6 +1,8 @@
 using System;
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyScript : MonoBehaviour
 {

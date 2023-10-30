@@ -25,6 +25,10 @@ public class HealthManager : MonoBehaviour
     private void Awake()
     {
         gameObject.tag = "Soul";
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            TakeDamage(10f);
+        }
     }
 
     // Update is called once per frame

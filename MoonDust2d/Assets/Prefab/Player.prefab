@@ -141,6 +141,7 @@ MonoBehaviour:
   SecretPlat: {fileID: 0}
   killWalls: []
   Endwall: {fileID: 0}
+  SecretDoorTimed: {fileID: 0}
   groundCheck: {fileID: 7157139888339170112}
   groundLayer:
     serializedVersion: 2
@@ -520,6 +521,7 @@ MonoBehaviour:
   resumeButton: {fileID: 0}
   _audioSource1: {fileID: 6395624256778316805}
   _audioSource2: {fileID: 1907529036514672666}
+  Vslider: {fileID: 0}
 --- !u!198 &5313293669248273200
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5391,7 +5393,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.042452812, g: 0.8549273, b: 1, a: 0.6392157}
+  m_Color: {r: 0.042452812, g: 0.8549273, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

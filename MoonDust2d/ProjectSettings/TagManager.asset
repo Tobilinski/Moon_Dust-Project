@@ -40,6 +40,10 @@ TagManager:
   - Respawn14
   - Respawn15
   - Respawn16
+  - Tut1
+  - Tut2
+  - Tut3
+  - Tut4
   layers:
   - Default
   - TransparentFX

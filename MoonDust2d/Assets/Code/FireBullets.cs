@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FireBullets : MonoBehaviour
@@ -21,6 +22,14 @@ public class FireBullets : MonoBehaviour
     private ParticleSystem particleSystem;
     private void Start()
     {
+        if(SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            _UltimateAbCount = 3;
+        }
+        else
+        {
+           _UltimateAbCount= 0; 
+        }
         _soundManager = FindObjectOfType<SoundManager>();
         particleSystem = GetComponent<ParticleSystem>();
     }
