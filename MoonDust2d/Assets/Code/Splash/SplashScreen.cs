@@ -22,6 +22,12 @@ public class SplashScreen : MonoBehaviour
             case "Scene 4":
                 Invoke("Splash", 13f);
                 break;
+            case "1stPoem":
+                Invoke("Splash", 3f);
+                break;
+            case "2nd Poem":
+                Invoke("Splash", 3f);
+                break;
         }
     }
 
