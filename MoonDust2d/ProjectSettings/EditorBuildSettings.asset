@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: ca0ab5afd9cb3eb46950e8d074e08a54
   - enabled: 1
+    path: Assets/Scenes/Cutscenes/1stPoem.unity
+    guid: ff69f5cd7ae7fc44bbf1069a91e7ae8a
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: ca7740b41f68942469bac861cf35ef37
   - enabled: 1
@@ -38,9 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 4.unity
     guid: 4fc63f00b1f331d419f0a749fa0bd1c5
-  - enabled: 1
-    path: Assets/Scenes/Cutscenes/1stPoem.unity
-    guid: ff69f5cd7ae7fc44bbf1069a91e7ae8a
   - enabled: 1
     path: Assets/Scenes/Cutscenes/2nd Poem.unity
     guid: 99fc5f8303b53bb439118cc11aa8fece
