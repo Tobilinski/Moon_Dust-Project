@@ -149,8 +149,10 @@ public class Movement : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 18)
         {
             killCountDoor();
+            killWalls[3].SetActive(true);
         }
 
+        print(KillCount);
         /////////////////////// MACH DAS CODE OBEN BESSER !!!
         
         
