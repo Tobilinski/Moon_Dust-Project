@@ -44,6 +44,7 @@ TagManager:
   - Tut2
   - Tut3
   - Tut4
+  - Explo
   layers:
   - Default
   - TransparentFX
