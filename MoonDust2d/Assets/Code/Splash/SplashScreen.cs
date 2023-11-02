@@ -8,7 +8,7 @@ public class SplashScreen : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Content warning":
-                Invoke("Splash", 1.5f);
+                Invoke("Splash", 3f);
                 break;
             case "Scene 1":
                 Invoke("Splash", 28f);
