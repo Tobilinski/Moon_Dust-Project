@@ -8,7 +8,7 @@ public class SplashScreen : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Content warning":
-                Invoke("Splash", 3f);
+                Invoke("Splash", 4f);
                 break;
             case "Scene 1":
                 Invoke("Splash", 28f);
@@ -23,10 +23,10 @@ public class SplashScreen : MonoBehaviour
                 Invoke("Splash", 13f);
                 break;
             case "1stPoem":
-                Invoke("Splash", 3f);
+                Invoke("Splash", 7f);
                 break;
             case "2nd Poem":
-                Invoke("Splash", 3f);
+                Invoke("Splash", 7f);
                 break;
         }
     }
