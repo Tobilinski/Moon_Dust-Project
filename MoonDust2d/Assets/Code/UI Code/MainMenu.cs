@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
    public void Play()
    {
-      SceneManager.LoadScene(sceneBuildIndex: +1);
+      SceneManager.LoadScene("1stPoem");
    }
 
    public void Quit()

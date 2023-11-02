@@ -152,7 +152,7 @@ public class Movement : MonoBehaviour
             killWalls[3].SetActive(true);
         }
 
-        print(KillCount);
+      
         /////////////////////// MACH DAS CODE OBEN BESSER !!!
         
         
