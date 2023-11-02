@@ -28,10 +28,10 @@ public class FireBullets : MonoBehaviour
         }
         else
         {
-           _UltimateAbCount= 0; 
+           _UltimateAbCount= 4; 
         }
         _soundManager = FindObjectOfType<SoundManager>();
-        particleSystem = GetComponent<ParticleSystem>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
     }
 
     public void Fire()
