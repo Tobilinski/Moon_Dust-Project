@@ -69,6 +69,8 @@ public class Movement : MonoBehaviour
      //Sound script variable
     private SoundManager _soundManager;
   
+    //Soul script
+    private HealthManager _healthManager;
     
     //////////////////////////////////////////////
 
@@ -100,6 +102,7 @@ public class Movement : MonoBehaviour
     {
         KillCount = 0;
         _soundManager = GetComponent<SoundManager>();
+        _healthManager = GameObject.Find("Soul").GetComponent<HealthManager>();
         Cursor.visible = false;
         rb = GetComponent<Rigidbody2D>();
         SecretPlat.SetActive(false);
@@ -247,6 +250,8 @@ public class Movement : MonoBehaviour
         if (_respawnPositions.TryGetValue(other.gameObject.tag, out Vector2 newPosition))
         {
             transform.position = newPosition;
+            _healthManager.TakeDamage(10f);
+            
         }
         
         switch (other.gameObject.tag)
