@@ -7747,6 +7747,10 @@ PrefabInstance:
       propertyPath: SoulHit
       value: 
       objectReference: {fileID: 8300000, guid: 9f74b58df5c3f4c488af82e43196882a, type: 3}
+    - target: {fileID: 2338701155402347708, guid: b3dff09c630f432489cbbc06d8612179, type: 3}
+      propertyPath: _maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3069965771875895275, guid: b3dff09c630f432489cbbc06d8612179, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

@@ -5,43 +5,43 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscenes/Content warning.unity
     guid: caf87fc66620e2542ac64148169430d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: ca0ab5afd9cb3eb46950e8d074e08a54
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscenes/1stPoem.unity
     guid: ff69f5cd7ae7fc44bbf1069a91e7ae8a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tutorial.unity
     guid: ca7740b41f68942469bac861cf35ef37
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscenes/Scene 1.unity
     guid: c6e2d12c4e94854468fb0bf28324a205
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 73e54696b48cc6f4b8a50c043e6d872c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscenes/Scene 2.unity
     guid: 77523104757ceef4d9f7774e99cceef5
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 7495298690251664fbfb2192edfc275e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscenes/Scene 3.unity
     guid: 9d88a96af6ac09e489ceee86c8e6bc4a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 3.unity
     guid: 043ad90135769c3458040ca927e55b45
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscenes/Scene 4.unity
     guid: 73fbb1ef944fb8241a1d6565e1fa3923
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 4.unity
     guid: 4fc63f00b1f331d419f0a749fa0bd1c5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscenes/2nd Poem.unity
     guid: 99fc5f8303b53bb439118cc11aa8fece
   m_configObjects: {}
