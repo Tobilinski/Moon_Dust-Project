@@ -50365,7 +50365,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669099303}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -52549,7 +52549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000009536743
+      value: -0.0000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -52561,7 +52561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000009536743
+      value: -0.0000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
