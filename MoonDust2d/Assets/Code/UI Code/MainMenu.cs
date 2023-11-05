@@ -14,12 +14,17 @@ public class MainMenu : MonoBehaviour
    public void Play()
    {
       audio.PlayOneShot(audioClip);
-      SceneManager.LoadScene("1stPoem");
+      Invoke("delay",0.5f);
    }
 
    public void Quit()
    {
       audio.PlayOneShot(audioClip);
       Application.Quit();
+   }
+
+   void delay()
+   {
+      SceneManager.LoadScene("1stPoem");
    }
 }
