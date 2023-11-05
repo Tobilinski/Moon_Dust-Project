@@ -13,11 +13,13 @@ public class PauseMenu : MonoBehaviour
     public AudioSource _audioSource2;
     private AudioSource _audioSourceSoul;
     public Slider Vslider;
+    private SoundManager _soundManager;
     void Start()
     {
         // Hide the pause menu at the start of the game
         pauseMenuUI.SetActive(false);
         _audioSourceSoul = GameObject.Find("Soul").GetComponent<AudioSource>();
+        _soundManager = GetComponent<SoundManager>();
     }
 
    
@@ -43,11 +45,13 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        _soundManager.Click();
         TogglePauseMenu();
     }
 
     public void QuitGame()
     {
+        _soundManager.Click();
         Application.Quit();// Quit the game
         print("Quit");
     }

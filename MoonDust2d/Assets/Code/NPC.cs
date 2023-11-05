@@ -29,6 +29,7 @@ public class NPC : MonoBehaviour
     //Audio source
     private AudioSource _audiosource;
     public Button theButton;
+    private SoundManager _soundManager;
     
     // Update is called once per frame
     void Update()
@@ -49,7 +50,8 @@ public class NPC : MonoBehaviour
             }
         }
 
-        
+        _soundManager = FindObjectOfType<SoundManager>();
+       
 
         
 
@@ -103,6 +105,7 @@ public class NPC : MonoBehaviour
     
     public void NextLine()
     {
+        _soundManager.Click();
         contButton.SetActive(false);
         if (index < dialogue.Length - 1)
         {

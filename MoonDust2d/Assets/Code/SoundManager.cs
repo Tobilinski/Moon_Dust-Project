@@ -10,14 +10,6 @@ public class SoundManager : MonoBehaviour
     public AudioSource _audioSource;
     public AudioClip[] audioClips;
     
-    
-    // Start is called before the first frame update
-    void Awake()
-    {
-       
-    }
-    
-
     public void JumpSound()
     {
         _audioSource.clip = audioClips[0];
@@ -53,6 +45,11 @@ public class SoundManager : MonoBehaviour
     public void UltimateSound()
     {
         _audioSource.PlayOneShot(audioClips[4]);
+    }
+
+    public void Click()
+    {
+        _audioSource.PlayOneShot(audioClips[5]);
     }
 
     private void StopSound()
