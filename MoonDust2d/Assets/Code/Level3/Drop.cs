@@ -15,7 +15,7 @@ public class Drop : MonoBehaviour
     {
         if(other.gameObject.TryGetComponent<Movement>(out Movement movementScript))
         {
-           Invoke("StartAnim", 0.5f);
+           Invoke("StartAnim", 0.3f);
             //print("damage taken from melee attack");
         }
     }
