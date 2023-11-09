@@ -34691,7 +34691,7 @@ GameObject:
   - component: {fileID: 1703380312}
   m_Layer: 0
   m_Name: NPC Berry
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43381,7 +43381,7 @@ GameObject:
   - component: {fileID: 8583208531701131451}
   m_Layer: 0
   m_Name: NPC Joe
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43402,7 +43402,7 @@ GameObject:
   - component: {fileID: 8583208531883848213}
   m_Layer: 0
   m_Name: NPC Alan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43862,11 +43862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.8
+      value: 110.2
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -43962,7 +43962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000009536743
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -43986,7 +43986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000009536743
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y

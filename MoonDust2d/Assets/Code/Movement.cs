@@ -1,5 +1,6 @@
 // Date Created: 28/08/2023
 
+using System.Collections;
 using System.Collections.Generic;
 using Pathfinding.Util;
 using UnityEngine;
@@ -270,7 +271,11 @@ public class Movement : MonoBehaviour
                 Invoke("SectioningDoor1", 11f);
                 break;
         }
-        
+
+        if (other.gameObject.CompareTag("NPC"))
+        {
+            StartCoroutine(StopMovingNPC(3f));
+        }
     }
 
     
@@ -336,5 +341,14 @@ public class Movement : MonoBehaviour
         {
             MeleeAttackBool = false;
         }
+    }
+    private IEnumerator StopMovingNPC(float Time)
+    {
+        enabled = false;
+        rb.velocity = new Vector2( 0f, 0f);
+        jumpForce = 0f;
+        yield return new WaitForSeconds(Time);
+        enabled = true;
+        jumpForce = 12f;
     }
 }

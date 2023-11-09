@@ -45,6 +45,7 @@ TagManager:
   - Tut3
   - Tut4
   - Explo
+  - NPC
   layers:
   - Default
   - TransparentFX

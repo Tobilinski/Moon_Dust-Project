@@ -26591,7 +26591,7 @@ GameObject:
   - component: {fileID: 567740339}
   m_Layer: 0
   m_Name: NPC Berry
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27074,7 +27074,7 @@ GameObject:
   - component: {fileID: 569579410}
   m_Layer: 0
   m_Name: NPC Joe
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40256,7 +40256,7 @@ GameObject:
   - component: {fileID: 803036603}
   m_Layer: 0
   m_Name: NPC Alan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

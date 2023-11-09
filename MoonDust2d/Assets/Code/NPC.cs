@@ -127,6 +127,7 @@ public class NPC : MonoBehaviour
             Arrow.SetActive(true);
             Cursor.visible = true;
             playerIsClose = true;
+            _isInteracting = true;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -137,6 +138,7 @@ public class NPC : MonoBehaviour
             Cursor.visible = false;
             playerIsClose = false;
             zeroText();
+            _isInteracting = false; 
         }
     }
     
