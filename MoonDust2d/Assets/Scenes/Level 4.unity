@@ -1871,6 +1871,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 652528111}
+    - target: {fileID: 1244063678435633717, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+      propertyPath: maxSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244063678435633717, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+      propertyPath: maxAcceleration
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3332514352539214590, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
       propertyPath: m_Name
       value: AI stuff--------

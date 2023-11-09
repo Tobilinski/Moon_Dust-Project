@@ -76,8 +76,8 @@ public class Movement : MonoBehaviour
 
     private Dictionary<string, Vector2> _respawnPositions = new Dictionary<string, Vector2>()
     {
-        {"Respawn1", new Vector2(112.8f, 12f)},
-        {"Respawn2", new Vector2(160.6f, 12f)},
+        {"Respawn1", new Vector2(111.44f, 12f)},
+        {"Respawn2", new Vector2(158.78f, 12f)},
         {"Respawn3", new Vector2(387.49f, 27f)},
         {"Respawn4", new Vector2(545.37f, 29.79f)},
         {"Respawn5", new Vector2(8.5f, -51.7f)},
@@ -92,8 +92,6 @@ public class Movement : MonoBehaviour
         {"Respawn14", new Vector2(220.3f, -32f)},
         {"Respawn15", new Vector2(285f, -111f)},
         {"Respawn16", new Vector2(734.9f, -53f)}
-        
-        
     };
     
 

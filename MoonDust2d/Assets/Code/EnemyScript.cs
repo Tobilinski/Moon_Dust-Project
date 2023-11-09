@@ -39,7 +39,7 @@ public class EnemyScript : MonoBehaviour
    {
        _health -= damageAmount;
        _audioSource.PlayOneShot(Hit);
-       CameraScript.Instance.ShakeCamera(4f, 0.1f);
+       CameraScript.Instance.ShakeCamera(8f, 0.2f);
        if(_health <= 0f)
        {
            Movement.KillCount++;
