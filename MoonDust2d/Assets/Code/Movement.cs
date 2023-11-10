@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
   
     //Soul script
     private HealthManager _healthManager;
-    
+
     //////////////////////////////////////////////
 
     private Dictionary<string, Vector2> _respawnPositions = new Dictionary<string, Vector2>()
@@ -195,7 +195,6 @@ public class Movement : MonoBehaviour
         //melée attack
         if (MeleeAttackBool)
         {
-            
             if(Time.time >= _nextAttackTime)
             {
                 _nextAttackTime = Time.time + 1f / _attackRate;
@@ -250,7 +249,7 @@ public class Movement : MonoBehaviour
         {
             transform.position = newPosition;
             _healthManager.TakeDamage(10f);
-            
+            StartCoroutine(DelayRespawn(2f));
         }
         
         switch (other.gameObject.tag)
@@ -347,6 +346,16 @@ public class Movement : MonoBehaviour
         enabled = false;
         rb.velocity = new Vector2( 0f, 0f);
         jumpForce = 0f;
+        yield return new WaitForSeconds(Time);
+        enabled = true;
+        jumpForce = 12f;
+    }
+    private IEnumerator DelayRespawn(float Time)
+    {
+        rb.velocity = new Vector2( 0f, 0f);
+        jumpForce = 0f;
+        animator.SetBool("IsJumping", false);
+        enabled = false;
         yield return new WaitForSeconds(Time);
         enabled = true;
         jumpForce = 12f;

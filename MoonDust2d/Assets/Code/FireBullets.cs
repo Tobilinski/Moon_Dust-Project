@@ -83,7 +83,6 @@ public class FireBullets : MonoBehaviour
             //print("Ultimate Attack"); 
             Fire();
             _UltimateAbCount = 0;
-            
         }
        
     }

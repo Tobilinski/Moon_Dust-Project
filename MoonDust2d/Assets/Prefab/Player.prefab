@@ -4979,6 +4979,7 @@ MonoBehaviour:
   animatorElevator1: {fileID: 0}
   animatorElevator2: {fileID: 0}
   attackWeapon: {fileID: 3702989014436882609}
+  particleSystem: {fileID: 0}
 --- !u!61 &4102315895008179407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5316,6 +5317,7 @@ MonoBehaviour:
   endAngle: 360
   UltimateAttackBool: 0
   CorruptionMeter: {fileID: 0}
+  UltimateAttackImage: {fileID: 0}
 --- !u!114 &6682683953448773102
 MonoBehaviour:
   m_ObjectHideFlags: 0
