@@ -20,7 +20,7 @@ public class FireBullets : MonoBehaviour
     public Image CorruptionMeter;
     private SoundManager _soundManager;
     private ParticleSystem particleSystem;
-    
+    public Image UltimateAttackImage;
     private void Start()
     {
         if(SceneManager.GetActiveScene().name == "Tutorial")
@@ -57,6 +57,7 @@ public class FireBullets : MonoBehaviour
             angle += angleStep;
         }
         _soundManager.UltimateSound();
+        UltimateAttackImage.color = Color.black;
     }
 
     private void Update()
@@ -65,6 +66,7 @@ public class FireBullets : MonoBehaviour
         CorruptionMeter.fillAmount = _UltimateAbCount / 4f;
         if (_UltimateAbCount >= 4)
         {
+            UltimateAttackImage.color = Color.yellow;
             particleSystem.Play();
         }
         else
