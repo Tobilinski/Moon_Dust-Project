@@ -1,8 +1,10 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 { 
@@ -87,5 +89,18 @@ public class PauseMenu : MonoBehaviour
     private void Save()
     {
         PlayerPrefs.SetFloat("musicVolume", Vslider.value);
+    }
+
+    public void ReturnToMenu()
+    {
+        StartCoroutine(MainDelay());
+        
+    }
+    public IEnumerator MainDelay()
+    {
+        _soundManager.Click();
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("MainMenu");
     }
 }

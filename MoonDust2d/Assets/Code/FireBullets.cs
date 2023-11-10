@@ -20,6 +20,7 @@ public class FireBullets : MonoBehaviour
     public Image CorruptionMeter;
     private SoundManager _soundManager;
     private ParticleSystem particleSystem;
+    
     private void Start()
     {
         if(SceneManager.GetActiveScene().name == "Tutorial")
