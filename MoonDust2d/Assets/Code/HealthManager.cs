@@ -1,3 +1,4 @@
+using System.Collections;
 using Pathfinding;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,7 +21,10 @@ public class HealthManager : MonoBehaviour
     [SerializeField]
     private float _attackRate = 3f;
     private float _nextAttackTime;
-    
+    [Header("Hit Marker")]
+    [Space(10)]
+    //Hitmarker
+    public GameObject hitMarker;
     
     private void Awake()
     {
@@ -56,6 +60,7 @@ public class HealthManager : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
+        StartCoroutine("HitMarkerdelay", 0.1f);
         Health -= damage;
         healthBar.fillAmount = Health / 100f;
         if (Health <= 0)
@@ -79,5 +84,12 @@ public class HealthManager : MonoBehaviour
             _nextAttackTime = Time.time + 1f / _attackRate;
             //print("damage taken");
         }
+    }
+
+    private IEnumerator HitMarkerdelay(float time)
+    {
+        hitMarker.SetActive(true);
+        yield return new WaitForSeconds(time);
+        hitMarker.SetActive(false);
     }
 }
