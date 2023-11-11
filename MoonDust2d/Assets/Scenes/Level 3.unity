@@ -14679,6 +14679,7 @@ GameObject:
   - component: {fileID: 331394017}
   - component: {fileID: 331394025}
   - component: {fileID: 331394026}
+  - component: {fileID: 331394027}
   m_Layer: 0
   m_Name: Soul
   m_TagString: Untagged
@@ -15043,6 +15044,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &331394027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331394016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletAmount: 10
+  startAngle: 0
+  endAngle: 360
+  UltimateAttackBool: 0
+  CorruptionMeter: {fileID: 15357770}
+  particleSystem: {fileID: 666686164}
+  UltimateAttackImage: {fileID: 871135050}
 --- !u!1 &331483290
 GameObject:
   m_ObjectHideFlags: 0
@@ -33290,6 +33310,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 803036599}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 331394027}
+    - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 666686162}
@@ -33331,11 +33355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[8].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[9].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -33347,7 +33371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[10].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -33384,6 +33408,10 @@ PrefabInstance:
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[9].m_MethodName
       value: Talk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Ultimate
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -33511,6 +33539,11 @@ MonoBehaviour:
 --- !u!1 &666686163 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1599383702759865624, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+  m_PrefabInstance: {fileID: 666686161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &666686164 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3540535005536300019, guid: 922e4942781d0b9449140262cb8607de, type: 3}
   m_PrefabInstance: {fileID: 666686161}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &667570807
@@ -67344,7 +67377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352272718}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 23.6, y: 15.9, z: 0}
+  m_LocalPosition: {x: 24.15, y: 15.9, z: 0}
   m_LocalScale: {x: 1, y: 11.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

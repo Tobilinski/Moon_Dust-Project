@@ -4844,7 +4844,6 @@ GameObject:
   - component: {fileID: 5639185769791919895}
   - component: {fileID: 7728488355526344285}
   - component: {fileID: 6395624256778316805}
-  - component: {fileID: 3142519661541080888}
   - component: {fileID: 6682683953448773102}
   - component: {fileID: 8044453190942170077}
   m_Layer: 0
@@ -4979,7 +4978,6 @@ MonoBehaviour:
   animatorElevator1: {fileID: 0}
   animatorElevator2: {fileID: 0}
   attackWeapon: {fileID: 3702989014436882609}
-  particleSystem: {fileID: 0}
 --- !u!61 &4102315895008179407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5169,7 +5167,7 @@ MonoBehaviour:
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3142519661541080888}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FireBullets, Assembly-CSharp
         m_MethodName: Ultimate
         m_Mode: 0
@@ -5300,24 +5298,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3142519661541080888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275400528404621967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletAmount: 10
-  startAngle: 0
-  endAngle: 360
-  UltimateAttackBool: 0
-  CorruptionMeter: {fileID: 0}
-  UltimateAttackImage: {fileID: 0}
 --- !u!114 &6682683953448773102
 MonoBehaviour:
   m_ObjectHideFlags: 0

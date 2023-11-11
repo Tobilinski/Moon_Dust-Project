@@ -6031,6 +6031,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
@@ -6042,6 +6046,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1714619282}
+    - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1504077754}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6065,6 +6073,10 @@ PrefabInstance:
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Talk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Ultimate
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -6094,7 +6106,8 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3178835443927869615, guid: 922e4942781d0b9449140262cb8607de, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
@@ -6142,6 +6155,11 @@ MonoBehaviour:
 --- !u!4 &1028365460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1842254864452996265, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+  m_PrefabInstance: {fileID: 1028365456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1028365461 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3540535005536300019, guid: 922e4942781d0b9449140262cb8607de, type: 3}
   m_PrefabInstance: {fileID: 1028365456}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1043586103
@@ -9279,6 +9297,7 @@ GameObject:
   - component: {fileID: 1504077746}
   - component: {fileID: 1504077745}
   - component: {fileID: 1504077744}
+  - component: {fileID: 1504077754}
   m_Layer: 0
   m_Name: Soul
   m_TagString: Untagged
@@ -9643,6 +9662,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1504077754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504077743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletAmount: 10
+  startAngle: 0
+  endAngle: 360
+  UltimateAttackBool: 0
+  CorruptionMeter: {fileID: 871085021}
+  particleSystem: {fileID: 1028365461}
+  UltimateAttackImage: {fileID: 1887257698}
 --- !u!1 &1533488655
 GameObject:
   m_ObjectHideFlags: 0

@@ -53596,7 +53596,7 @@ PrefabInstance:
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1665444744}
+      objectReference: {fileID: 1815723983}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -53619,15 +53619,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[3].m_CallState
@@ -53878,17 +53878,11 @@ MonoBehaviour:
   m_AmplitudeGain: 1
   m_FrequencyGain: 1
   mNoiseOffsets: {x: 0, y: 0, z: 0}
---- !u!114 &1665444744 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3178835443927869615, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+--- !u!198 &1665444744 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3540535005536300019, guid: 922e4942781d0b9449140262cb8607de, type: 3}
   m_PrefabInstance: {fileID: 1665444741}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783558998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1665444745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
@@ -58352,6 +58346,18 @@ PrefabInstance:
       propertyPath: maxAcceleration
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1823808123896215708, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 1665444744}
+    - target: {fileID: 1823808123896215708, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+      propertyPath: CorruptionMeter
+      value: 
+      objectReference: {fileID: 582926753}
+    - target: {fileID: 1823808123896215708, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+      propertyPath: UltimateAttackImage
+      value: 
+      objectReference: {fileID: 803013414}
     - target: {fileID: 3332514352539214590, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
       propertyPath: m_Name
       value: AI stuff--------
@@ -58429,6 +58435,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+--- !u!114 &1815723983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1823808123896215708, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+  m_PrefabInstance: {fileID: 1815723982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1815723985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7857974693732923468, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
