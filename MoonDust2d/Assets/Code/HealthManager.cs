@@ -25,6 +25,8 @@ public class HealthManager : MonoBehaviour
     [Space(10)]
     //Hitmarker
     public GameObject hitMarker;
+    // Health marker
+    public GameObject VignetteHealth;
     
     private void Awake()
     {
@@ -74,6 +76,7 @@ public class HealthManager : MonoBehaviour
     {
         Health += heal;
         healthBar.fillAmount = Health / 100f;
+        StartCoroutine("HVignette", 0.15f);
     }
     
     private void OnTriggerStay2D(Collider2D other)
@@ -91,5 +94,11 @@ public class HealthManager : MonoBehaviour
         hitMarker.SetActive(true);
         yield return new WaitForSeconds(time);
         hitMarker.SetActive(false);
+    }
+    private IEnumerator HVignette(float time)
+    {
+        VignetteHealth.SetActive(true);
+        yield return new WaitForSeconds(time);
+        VignetteHealth.SetActive(false);
     }
 }

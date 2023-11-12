@@ -1782,6 +1782,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
+      propertyPath: VigntteHealth
+      value: 
+      objectReference: {fileID: 1681792997}
+    - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
       propertyPath: _healthManager
       value: 
       objectReference: {fileID: 1906293884}
@@ -5660,6 +5664,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
+      propertyPath: VigntteHealth
+      value: 
+      objectReference: {fileID: 1681792997}
     - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
       propertyPath: _healthManager
       value: 
@@ -9974,6 +9982,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
+      propertyPath: VigntteHealth
+      value: 
+      objectReference: {fileID: 1681792997}
+    - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
       propertyPath: _healthManager
       value: 
       objectReference: {fileID: 1906293884}
@@ -11152,6 +11164,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
+      propertyPath: VigntteHealth
+      value: 
+      objectReference: {fileID: 1681792997}
+    - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
       propertyPath: _healthManager
       value: 
       objectReference: {fileID: 1906293884}
@@ -11990,6 +12006,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 820089931}
+  - {fileID: 1681792998}
   - {fileID: 221193626}
   - {fileID: 5260279913337398763}
   - {fileID: 6338546917722046727}
@@ -30224,6 +30241,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
+      propertyPath: VigntteHealth
+      value: 
+      objectReference: {fileID: 1681792997}
+    - target: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
       propertyPath: _healthManager
       value: 
       objectReference: {fileID: 1906293884}
@@ -36067,6 +36088,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1681792997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1681792998}
+  - component: {fileID: 1681793000}
+  - component: {fileID: 1681792999}
+  m_Layer: 5
+  m_Name: VignetteHealth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1681792998
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681792997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 534520465}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.0008544922}
+  m_SizeDelta: {x: 0, y: 0.7999878}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1681792999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681792997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 894d0ca9bf7dcaa47a02c2009fde5a96, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1681793000
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681792997}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1682663122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36452,11 +36549,11 @@ MonoBehaviour:
   - Just incase your soul barly got out alive from that mess....
   - Im unlocking you a secret health drop to help you..
   - 'You are welcome '
-  contButton: {fileID: 0}
+  contButton: {fileID: 1881846116}
   wordSpeed: 0.06
   playerIsClose: 0
   Arrow: {fileID: 2096735095}
-  theButton: {fileID: 0}
+  theButton: {fileID: 1881846118}
 --- !u!61 &1703380309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46112,6 +46209,10 @@ PrefabInstance:
       propertyPath: hitMarker
       value: 
       objectReference: {fileID: 221193625}
+    - target: {fileID: 9158057466859694116, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+      propertyPath: VignetteHealth
+      value: 
+      objectReference: {fileID: 1681792997}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46135,11 +46236,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.4
+      value: 194.2
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.9
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -46239,7 +46340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000014305115
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -46263,7 +46364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000014305115
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -46924,11 +47025,11 @@ MonoBehaviour:
   - There should be a few near by.
   - 'Good Luck '
   - Muhahaha
-  contButton: {fileID: 0}
+  contButton: {fileID: 996059123}
   wordSpeed: 0.06
   playerIsClose: 0
   Arrow: {fileID: 46748893}
-  theButton: {fileID: 0}
+  theButton: {fileID: 996059125}
 --- !u!114 &3932634701146885721
 MonoBehaviour:
   m_ObjectHideFlags: 0

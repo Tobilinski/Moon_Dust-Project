@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
@@ -22,12 +24,11 @@ public class HealthOrb : MonoBehaviour
     {
         if (_isInteracting && _isClose && _healthManager.Health < 100f)
         {
-            _healthManager.Heal(20f);
+            _healthManager.Heal(30f);
             _soundManager.HealSound();
             print(_healthManager.Health);
             Destroy(gameObject);
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
