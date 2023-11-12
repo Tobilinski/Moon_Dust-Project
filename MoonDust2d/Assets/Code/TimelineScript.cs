@@ -17,16 +17,18 @@ public class TimelineScript : MonoBehaviour
                 break;
             case "Tut2":
                 PD[1].Play();
-                PD[0].Stop();
                 break;
             case "Tut3":
                 PD[2].Play();
-                PD[1].Stop();
                 break;
             case "Tut4":
                 PD[3].Play();
-                PD[2].Stop();
                 break;
         }
+        /*if (other.gameObject.CompareTag("Tut2"))
+        {
+            PD[1].Play();
+        }*/
+        
     }
 }
