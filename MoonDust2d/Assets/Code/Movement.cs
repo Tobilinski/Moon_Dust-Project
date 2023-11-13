@@ -146,7 +146,6 @@ public class Movement : MonoBehaviour
                 jumpForce = 12f;
                 NPCDetect = false;
             }
-
             if (NPC[1].activeSelf)
             {
                 speed= 0f;
