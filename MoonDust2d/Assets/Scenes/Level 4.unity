@@ -52806,9 +52806,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1951235598}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: NPC.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: SecretDoorTimed
       value: 
       objectReference: {fileID: 1130489874}
+    - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: NPC.Array.data[0]
+      value: 
+      objectReference: {fileID: 2041611577}
+    - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: NPC.Array.data[1]
+      value: 
+      objectReference: {fileID: 831057903}
+    - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: NPC.Array.data[2]
+      value: 
+      objectReference: {fileID: 1752767998}
+    - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: NPC.Array.data[3]
+      value: 
+      objectReference: {fileID: 1796624816}
     - target: {fileID: 6875915851333304561, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: animatorElevator1
       value: 

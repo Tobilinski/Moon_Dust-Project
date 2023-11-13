@@ -74,7 +74,11 @@ public class Movement : MonoBehaviour
     //Soul script
     private HealthManager _healthManager;
 
-    private bool Testbool;
+    private bool NPCDetect;
+    [Header("NPC Stuff")]
+    [Space(10)]
+    public GameObject[] NPC;
+    
     //////////////////////////////////////////////
 
     private Dictionary<string, Vector2> _respawnPositions = new Dictionary<string, Vector2>()
@@ -111,6 +115,141 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        //////Tutorial NPC
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            if (NPC[0].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            else
+            {
+                speed = 8f;
+                jumpForce = 12f;
+                NPCDetect = false;
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level 1")
+        {
+            if (NPC[0].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            else
+            {
+                speed = 8f;
+                jumpForce = 12f;
+                NPCDetect = false;
+            }
+
+            if (NPC[1].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            if (NPC[2].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "Level 2")
+        {
+            if (NPC[0].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            else
+            {
+                speed = 8f;
+                jumpForce = 12f;
+                NPCDetect = false;
+            }
+
+            if (NPC[1].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            if (NPC[2].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "Level 3")
+        {
+            if (NPC[0].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            else
+            {
+                speed = 8f;
+                jumpForce = 12f;
+                NPCDetect = false;
+            }
+
+            if (NPC[1].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            if (NPC[2].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            if (NPC[0].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            else
+            {
+                speed = 8f;
+                jumpForce = 12f;
+                NPCDetect = false;
+            }
+
+            if (NPC[1].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            if (NPC[2].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+            if (NPC[3].activeSelf)
+            {
+                speed= 0f;
+                jumpForce = 0f;
+                NPCDetect = true;
+            }
+        }
         // checks kill counts and does something depending on which level you are on
         if (SceneManager.GetActiveScene().name == "Level 1" && KillCount == 14)
         {
@@ -195,7 +334,7 @@ public class Movement : MonoBehaviour
        
         
         //melée attack
-        if (MeleeAttackBool && Testbool == false)
+        if (MeleeAttackBool && NPCDetect == false)
         {
             if(Time.time >= _nextAttackTime)
             {
@@ -205,7 +344,7 @@ public class Movement : MonoBehaviour
                 attackWeapon.SetActive(true);
                 animator.SetBool("IsKilling", true);
                 Invoke(nameof(MeleeStop), 0.1f);
-                print("Attack");
+                //print("Attack");
             }
         }
         else
@@ -244,18 +383,7 @@ public class Movement : MonoBehaviour
             _triggered = false;
         }
     }
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("NPC"))
-        {
-            Testbool = true;
-            animator.SetBool("IsKilling", false);
-        }
-        else
-        {
-            Testbool = false;
-        }
-    }
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (_respawnPositions.TryGetValue(other.gameObject.tag, out Vector2 newPosition))
@@ -282,11 +410,6 @@ public class Movement : MonoBehaviour
             case "Section":
                 Invoke("SectioningDoor1", 11f);
                 break;
-        }
-
-        if (other.gameObject.CompareTag("NPC"))
-        {
-            StartCoroutine(StopMovingNPC(6f));
         }
     }
 
@@ -355,24 +478,16 @@ public class Movement : MonoBehaviour
             MeleeAttackBool = false;
         }
     }
-    private IEnumerator StopMovingNPC(float Time)
-    {
-        enabled = false;
-        rb.velocity = new Vector2( 0f, 0f);
-        jumpForce = 0f;
-        yield return new WaitForSeconds(Time);
-        enabled = true;
-        jumpForce = 12f;
-    }
     private IEnumerator DelayRespawn(float Time)
     {
         rb.velocity = new Vector2( 0f, 0f);
         jumpForce = 0f;
         animator.SetBool("IsKilling", false);
         animator.SetBool("IsJumping", false);
-        enabled = false;
+        speed= 0f;
         yield return new WaitForSeconds(Time);
         enabled = true;
         jumpForce = 12f;
+        speed = 8f;
     }
 }
