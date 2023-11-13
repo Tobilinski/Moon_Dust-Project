@@ -24,6 +24,9 @@ public class TimelineScript : MonoBehaviour
             case "Tut4":
                 PD[3].Play();
                 break;
+            case "Tut5":
+                PD[4].Play();
+                break;
         }
         /*if (other.gameObject.CompareTag("Tut2"))
         {
