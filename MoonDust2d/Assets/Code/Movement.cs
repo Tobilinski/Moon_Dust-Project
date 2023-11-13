@@ -1,5 +1,6 @@
 // Date Created: 28/08/2023
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Pathfinding.Util;
@@ -73,6 +74,7 @@ public class Movement : MonoBehaviour
     //Soul script
     private HealthManager _healthManager;
 
+    private bool Testbool;
     //////////////////////////////////////////////
 
     private Dictionary<string, Vector2> _respawnPositions = new Dictionary<string, Vector2>()
@@ -193,7 +195,7 @@ public class Movement : MonoBehaviour
        
         
         //melée attack
-        if (MeleeAttackBool)
+        if (MeleeAttackBool && Testbool == false)
         {
             if(Time.time >= _nextAttackTime)
             {
@@ -203,7 +205,7 @@ public class Movement : MonoBehaviour
                 attackWeapon.SetActive(true);
                 animator.SetBool("IsKilling", true);
                 Invoke(nameof(MeleeStop), 0.1f);
-                //print("Attack");
+                print("Attack");
             }
         }
         else
@@ -242,7 +244,18 @@ public class Movement : MonoBehaviour
             _triggered = false;
         }
     }
-
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("NPC"))
+        {
+            Testbool = true;
+            animator.SetBool("IsKilling", false);
+        }
+        else
+        {
+            Testbool = false;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (_respawnPositions.TryGetValue(other.gameObject.tag, out Vector2 newPosition))
@@ -273,12 +286,13 @@ public class Movement : MonoBehaviour
 
         if (other.gameObject.CompareTag("NPC"))
         {
-            StartCoroutine(StopMovingNPC(3f));
+            StartCoroutine(StopMovingNPC(6f));
         }
     }
 
     
-    
+
+
     private void SecretDoor()
     {
         SecretPlat.SetActive(true);
@@ -354,6 +368,7 @@ public class Movement : MonoBehaviour
     {
         rb.velocity = new Vector2( 0f, 0f);
         jumpForce = 0f;
+        animator.SetBool("IsKilling", false);
         animator.SetBool("IsJumping", false);
         enabled = false;
         yield return new WaitForSeconds(Time);

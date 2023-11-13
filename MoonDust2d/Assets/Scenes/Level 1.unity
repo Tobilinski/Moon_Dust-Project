@@ -17452,7 +17452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &820089931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46141,6 +46141,10 @@ PrefabInstance:
       propertyPath: UltimateAttackImage
       value: 
       objectReference: {fileID: 820089932}
+    - target: {fileID: 3036635135741370506, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3332514352539214590, guid: 3127c305982e01c4aafd2aa9635eaacd, type: 3}
       propertyPath: m_Name
       value: AI stuff--------
@@ -46236,11 +46240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 194.2
+      value: 305.23
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.6
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 705258031272763973, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -46344,7 +46348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.32
+      value: -5.3199997
       objectReference: {fileID: 0}
     - target: {fileID: 5127360801834245183, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -46368,7 +46372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.32
+      value: -5.3199997
       objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47480,6 +47484,10 @@ PrefabInstance:
     - target: {fileID: 1132651201673301133, guid: d60f03ccd72c23e47b98ee6580035d4a, type: 3}
       propertyPath: m_Name
       value: Backgroundmusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132651201673301133, guid: d60f03ccd72c23e47b98ee6580035d4a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2533109012545563165, guid: d60f03ccd72c23e47b98ee6580035d4a, type: 3}
       propertyPath: m_RootOrder
