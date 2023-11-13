@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3bd82a8427d6c7240972d399e5f2bc43
+guid: 40dbdd2daaa29d04e83d614aa7d47e5e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,106 +119,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AttackAnim_0
+      name: AttackAnimPlayer_0
       rect:
         serializedVersion: 2
         x: 70
-        y: 69
+        y: 68
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 981170b8b89aa3c4d8e6f0f0dcf037a8
-      internalID: -207321310
+      spriteID: 15d94f5bbe70be245a788dc020d60342
+      internalID: 985439261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackAnim_1
+      name: AttackAnimPlayer_1
       rect:
         serializedVersion: 2
         x: 310
-        y: 70
+        y: 66
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a84377b85ff36a4d801ed8012714571
-      internalID: 850872941
+      spriteID: ed89203371b6f6041b9ab43337f65601
+      internalID: -794412465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackAnim_3
+      name: AttackAnimPlayer_3
       rect:
         serializedVersion: 2
-        x: 551
-        y: 68
+        x: 550
+        y: 67
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3363a9e44213cf64a81eb8a63d904dca
-      internalID: 358706346
+      spriteID: 54006172c6cb4ec4abdb972a37e6f592
+      internalID: -1779219228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackAnim_6
+      name: AttackAnimPlayer_6
       rect:
         serializedVersion: 2
         x: 791
-        y: 69
+        y: 67
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df90bfae4debe9842b8ea305ec8b7d8f
-      internalID: 898663953
+      spriteID: ff4850f191f9bc74f8403687f25a9431
+      internalID: -1121482074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AttackAnim_7
+      name: AttackAnimPlayer_7
       rect:
         serializedVersion: 2
         x: 1029
-        y: 68
+        y: 66
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 000be51df80db154dbc0965c609f35e0
-      internalID: -601228960
+      spriteID: a0de61f46bba72147ae4e6c41a20c090
+      internalID: -1512137978
       vertices: []
       indices: 
       edges: []
@@ -234,15 +234,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AttackAnim_0: -207321310
-      AttackAnim_1: 850872941
-      AttackAnim_2: -768799894
-      AttackAnim_3: 358706346
-      AttackAnim_4: 1006811416
-      AttackAnim_5: -1507961796
-      AttackAnim_6: 898663953
-      AttackAnim_7: -601228960
-      AttackAnim_8: -1794052028
+      AttackAnimPlayer_0: 985439261
+      AttackAnimPlayer_1: -794412465
+      AttackAnimPlayer_2: 2038236919
+      AttackAnimPlayer_3: -1779219228
+      AttackAnimPlayer_4: 1987195480
+      AttackAnimPlayer_5: -1470410589
+      AttackAnimPlayer_6: -1121482074
+      AttackAnimPlayer_7: -1512137978
+      AttackAnimPlayer_8: -1023386196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
