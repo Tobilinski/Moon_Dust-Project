@@ -57,4 +57,8 @@ public class SoundManager : MonoBehaviour
         _audioSource.Stop();
     }
 
+    public void Explosion()
+    {
+        _audioSource.PlayOneShot(audioClips[6]);
+    }
 }
