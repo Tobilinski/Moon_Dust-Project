@@ -879,8 +879,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23336736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2322792, y: 80.32136, z: 0}
-  m_LocalScale: {x: 0.94557816, y: 1.5222284, z: 1}
+  m_LocalPosition: {x: -1.17096, y: 83.8, z: 0}
+  m_LocalScale: {x: 1.0682195, y: 1.5222284, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1141214445}
@@ -11036,15 +11036,15 @@ PrefabInstance:
     - target: {fileID: 7503743046378736714, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: Vslider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1537525361}
     - target: {fileID: 7503743046378736714, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: pauseMenuUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1004018294}
     - target: {fileID: 7503743046378736714, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: resumeButton
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1712164078}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 17
@@ -27494,7 +27494,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 666686162}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -31668,8 +31668,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979132547}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.821, y: 67.697, z: 0}
-  m_LocalScale: {x: 2.939, y: 1.1462, z: 1}
+  m_LocalPosition: {x: -4.5043, y: 68.588, z: 0}
+  m_LocalScale: {x: 3.3096075, y: 1.0036126, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 148529210}
