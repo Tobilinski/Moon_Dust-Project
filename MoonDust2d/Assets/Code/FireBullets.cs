@@ -60,7 +60,7 @@ public class FireBullets : MonoBehaviour
         UltimateAttackImage.color = Color.black;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         UltimateAttack();
         CorruptionMeter.fillAmount = _UltimateAbCount / 4f;
