@@ -115,6 +115,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        print(KillCount);
         //////Tutorial NPC
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {

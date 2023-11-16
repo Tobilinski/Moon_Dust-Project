@@ -14,22 +14,5 @@ public class Weapon : MonoBehaviour
            enemyScript.TakeDamage(10f);
            //print("damage taken from melee attack");
        }
-       
-       if(other.gameObject.CompareTag("SlowDown"))
-       {
-           slowBabaSlow();
-           Destroy(other.gameObject);
-       }
-   }
-   void FastAgainBaba()
-   {
-       _AIPath[0].maxSpeed = 1.5f;
-       _AIPath[1].maxSpeed = 1.5f;
-   }
-   void slowBabaSlow()
-   {
-       _AIPath[0].maxSpeed = 0.5f;
-       _AIPath[1].maxSpeed = 0.5f;
-       Invoke("FastAgainBaba",4f);
    }
 }

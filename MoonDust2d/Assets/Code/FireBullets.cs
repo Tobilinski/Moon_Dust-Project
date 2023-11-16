@@ -33,7 +33,6 @@ public class FireBullets : MonoBehaviour
         }
         _soundManager = FindObjectOfType<SoundManager>();
         particleSystem = GetComponentInChildren<ParticleSystem>();
-        print(particleSystem);
     }
 
     public void Fire()

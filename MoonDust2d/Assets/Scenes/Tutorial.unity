@@ -925,7 +925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.6, y: 1.14}
+  m_AnchoredPosition: {x: -78.06, y: 1.14}
   m_SizeDelta: {x: 9.1928, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34942589
@@ -13561,7 +13561,7 @@ MonoBehaviour:
   radius: 0.7
   height: 2
   canMove: 1
-  maxSpeed: 7
+  maxSpeed: 8
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -13578,7 +13578,7 @@ MonoBehaviour:
     maximumInterval: 2
     visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
-  maxAcceleration: 5
+  maxAcceleration: 10
   rotationSpeed: 360
   slowdownDistance: 3.72
   pickNextWaypointDist: 0.85

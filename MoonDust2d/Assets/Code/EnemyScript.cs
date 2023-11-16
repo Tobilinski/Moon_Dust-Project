@@ -42,10 +42,10 @@ public class EnemyScript : MonoBehaviour
        CameraScript.Instance.ShakeCamera(8f, 0.2f);
        if(_health <= 0f)
        {
-           Movement.KillCount++;
-           FireBullets._UltimateAbCount++;
            //print(FireBullets._UltimateAbCount);
            Destroy(gameObject);
+           Movement.KillCount++;
+           FireBullets._UltimateAbCount++;
        }
    }
 

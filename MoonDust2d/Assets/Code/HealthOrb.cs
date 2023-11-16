@@ -26,7 +26,7 @@ public class HealthOrb : MonoBehaviour
         {
             _healthManager.Heal(30f);
             _soundManager.HealSound();
-            print(_healthManager.Health);
+            //print(_healthManager.Health);
             Destroy(gameObject);
         }
     }
