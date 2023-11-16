@@ -19,7 +19,7 @@ public class FireBullets : MonoBehaviour
     public bool UltimateAttackBool;
     public Image CorruptionMeter;
     private SoundManager _soundManager;
-    public ParticleSystem particleSystem;
+    private ParticleSystem particleSystem;
     public Image UltimateAttackImage;
     private void Start()
     {
@@ -29,9 +29,11 @@ public class FireBullets : MonoBehaviour
         }
         else
         {
-           _UltimateAbCount= 0; 
+           _UltimateAbCount= 4; 
         }
         _soundManager = FindObjectOfType<SoundManager>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
+        print(particleSystem);
     }
 
     public void Fire()
