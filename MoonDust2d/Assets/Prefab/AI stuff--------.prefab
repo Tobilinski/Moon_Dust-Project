@@ -5377,7 +5377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletAmount: 10
+  bulletAmount: 15
   startAngle: 0
   endAngle: 360
   UltimateAttackBool: 0

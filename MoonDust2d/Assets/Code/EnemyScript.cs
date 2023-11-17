@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Pathfinding;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,12 +15,14 @@ public class EnemyScript : MonoBehaviour
     public AudioClip Hit;
     public AudioClip SoulHit;
     private AudioSource _audioSource;
+    private Material _material;
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _aiPath = GetComponent<AIPath>();
         _animator = GetComponentInChildren<Animator>();
-       _health = _maxHealth;
+        _health = _maxHealth;
+        _material = GetComponentInChildren<SpriteRenderer>().material;
    }
 
     private void Update()
@@ -39,7 +42,8 @@ public class EnemyScript : MonoBehaviour
    {
        _health -= damageAmount;
        _audioSource.PlayOneShot(Hit);
-       CameraScript.Instance.ShakeCamera(8f, 0.2f);
+       StartCoroutine("HitMarkerdelay", 0.3f);
+       CameraScript.Instance.ShakeCamera(10f, 0.2f);
        if(_health <= 0f)
        {
            //print(FireBullets._UltimateAbCount);
@@ -77,5 +81,11 @@ public class EnemyScript : MonoBehaviour
             CancelInvoke("enemyAttackingSound");
             _animator.SetBool("isAttacking", false);
         }
+    }
+    private IEnumerator HitMarkerdelay(float time)
+    {
+        _material.color = Color.red;
+        yield return new WaitForSeconds(time);
+        _material.color = Color.white;
     }
 }

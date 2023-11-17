@@ -30,12 +30,10 @@ public class NPC : MonoBehaviour
     private AudioSource _audiosource;
     public Button theButton;
     private SoundManager _soundManager;
-    private BoxCollider2D _boxCollider2D;
 
     private void Start()
     {
         _soundManager = FindObjectOfType<SoundManager>();
-        _boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -141,8 +139,7 @@ public class NPC : MonoBehaviour
             Cursor.visible = false;
             playerIsClose = false;
             zeroText();
-            _isInteracting = false; 
-            _boxCollider2D.enabled = false;
+            _isInteracting = false;
         }
     }
     

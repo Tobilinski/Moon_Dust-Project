@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 7864466}
   - component: {fileID: 7864468}
   - component: {fileID: 7864467}
+  - component: {fileID: 7864469}
   m_Layer: 9
   m_Name: Square (67)
   m_TagString: Platform
@@ -186,7 +187,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -253,6 +254,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &7864469
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864465}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &9304824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,6 +2155,7 @@ GameObject:
   - component: {fileID: 147748080}
   - component: {fileID: 147748079}
   - component: {fileID: 147748078}
+  - component: {fileID: 147748081}
   m_Layer: 9
   m_Name: Square (18)
   m_TagString: Platform
@@ -2172,7 +2193,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -2254,6 +2275,25 @@ Transform:
   m_Father: {fileID: 1197437312}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &147748081
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147748077}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &148529209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,17 +2617,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3163475991023523916, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
   m_PrefabInstance: {fileID: 185467844}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &185467846 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
-  m_PrefabInstance: {fileID: 185467844}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92836258c037504468e6b5479fd26795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &187707536
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,17 +3661,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
---- !u!114 &256242895 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
-  m_PrefabInstance: {fileID: 256242894}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92836258c037504468e6b5479fd26795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &256242896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3163475991023523916, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
@@ -3789,6 +3807,7 @@ GameObject:
   - component: {fileID: 271039557}
   - component: {fileID: 271039559}
   - component: {fileID: 271039558}
+  - component: {fileID: 271039560}
   m_Layer: 9
   m_Name: Square (60)
   m_TagString: Platform
@@ -3841,7 +3860,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -3908,6 +3927,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &271039560
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271039556}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &280047293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,6 +4126,7 @@ GameObject:
   - component: {fileID: 291923756}
   - component: {fileID: 291923758}
   - component: {fileID: 291923759}
+  - component: {fileID: 291923760}
   m_Layer: 9
   m_Name: Break3
   m_TagString: Platform
@@ -4140,7 +4179,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -4197,7 +4236,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4240,6 +4279,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12d6d6b43799ef4597d6ef43d6f86bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!251 &291923760
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291923754}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &300819456
 GameObject:
   m_ObjectHideFlags: 0
@@ -4997,7 +5055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletAmount: 10
+  bulletAmount: 15
   startAngle: 0
   endAngle: 360
   UltimateAttackBool: 0
@@ -6733,6 +6791,7 @@ GameObject:
   - component: {fileID: 471781328}
   - component: {fileID: 471781330}
   - component: {fileID: 471781329}
+  - component: {fileID: 471781331}
   m_Layer: 9
   m_Name: Square (26)
   m_TagString: Platform
@@ -6785,7 +6844,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -6852,6 +6911,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &471781331
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471781327}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &472536181
 GameObject:
   m_ObjectHideFlags: 0
@@ -6993,6 +7071,7 @@ GameObject:
   - component: {fileID: 474669103}
   - component: {fileID: 474669105}
   - component: {fileID: 474669104}
+  - component: {fileID: 474669106}
   m_Layer: 9
   m_Name: Square (29)
   m_TagString: Platform
@@ -7045,7 +7124,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -7112,6 +7191,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &474669106
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474669102}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &477681970
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,6 +7319,7 @@ GameObject:
   - component: {fileID: 481289480}
   - component: {fileID: 481289482}
   - component: {fileID: 481289483}
+  - component: {fileID: 481289484}
   m_Layer: 9
   m_Name: Break
   m_TagString: Platform
@@ -7273,7 +7372,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -7330,7 +7429,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7373,6 +7472,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12d6d6b43799ef4597d6ef43d6f86bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!251 &481289484
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481289478}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &483094695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7935,7 +8053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &511762420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8100,17 +8218,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3163475991023523916, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
   m_PrefabInstance: {fileID: 530031161}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &530031163 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
-  m_PrefabInstance: {fileID: 530031161}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92836258c037504468e6b5479fd26795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &537065722
 GameObject:
   m_ObjectHideFlags: 0
@@ -9793,6 +9900,7 @@ GameObject:
   - component: {fileID: 603713754}
   - component: {fileID: 603713756}
   - component: {fileID: 603713755}
+  - component: {fileID: 603713757}
   m_Layer: 9
   m_Name: Square (32)
   m_TagString: Platform
@@ -9845,7 +9953,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -9912,6 +10020,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &603713757
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603713753}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &603822734
 GameObject:
   m_ObjectHideFlags: 0
@@ -10019,7 +10146,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11059,7 +11186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.size
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.size
@@ -11116,43 +11243,43 @@ PrefabInstance:
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1113666331}
+      objectReference: {fileID: 569579406}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1294594204}
+      objectReference: {fileID: 803036599}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 185467846}
+      objectReference: {fileID: 567740335}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 530031163}
+      objectReference: {fileID: 567740335}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1411752747}
+      objectReference: {fileID: 567740335}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
-      objectReference: {fileID: 1443505177}
+      objectReference: {fileID: 567740335}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
-      objectReference: {fileID: 761335091}
+      objectReference: {fileID: 567740335}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[7].m_Target
       value: 
-      objectReference: {fileID: 256242895}
+      objectReference: {fileID: 567740335}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[8].m_Target
       value: 
-      objectReference: {fileID: 569579406}
+      objectReference: {fileID: 567740335}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[9].m_Target
       value: 
-      objectReference: {fileID: 803036599}
+      objectReference: {fileID: 567740335}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11179,23 +11306,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[4].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[5].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[6].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[7].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[8].m_CallState
@@ -11211,7 +11338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: absorb
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[10].m_CallState
@@ -11219,31 +11346,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: absorb
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: absorb
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: absorb
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: absorb
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
-      value: absorb
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
-      value: absorb
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[7].m_MethodName
-      value: absorb
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[8].m_MethodName
@@ -11267,35 +11394,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HealthOrb, Assembly-CSharp
+      value: NPC, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: HealthOrb, Assembly-CSharp
+      value: NPC, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: HealthOrb, Assembly-CSharp
+      value: NPC, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: HealthOrb, Assembly-CSharp
+      value: NPC, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: HealthOrb, Assembly-CSharp
+      value: NPC, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
-      value: HealthOrb, Assembly-CSharp
+      value: NPC, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
-      value: HealthOrb, Assembly-CSharp
+      value: NPC, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[7].m_TargetAssemblyTypeName
-      value: HealthOrb, Assembly-CSharp
+      value: NPC, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7836296557334374858, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[8].m_TargetAssemblyTypeName
@@ -11802,7 +11929,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12182,6 +12309,7 @@ GameObject:
   - component: {fileID: 698622074}
   - component: {fileID: 698622073}
   - component: {fileID: 698622072}
+  - component: {fileID: 698622075}
   m_Layer: 9
   m_Name: Square (14)
   m_TagString: Platform
@@ -12219,7 +12347,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -12301,6 +12429,25 @@ Transform:
   m_Father: {fileID: 1197437312}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &698622075
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698622071}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &700478755
 GameObject:
   m_ObjectHideFlags: 0
@@ -12436,6 +12583,7 @@ GameObject:
   - component: {fileID: 724847654}
   - component: {fileID: 724847656}
   - component: {fileID: 724847655}
+  - component: {fileID: 724847657}
   m_Layer: 9
   m_Name: Square (33)
   m_TagString: Platform
@@ -12488,7 +12636,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -12555,6 +12703,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &724847657
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724847653}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &727186985 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1143391787852307700, guid: 69a97286f3ca5c3468b953516901a98b, type: 3}
@@ -12931,17 +13098,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3163475991023523916, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
   m_PrefabInstance: {fileID: 761335089}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &761335091 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
-  m_PrefabInstance: {fileID: 761335089}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92836258c037504468e6b5479fd26795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &761572751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13395,7 +13551,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16475,6 +16631,7 @@ GameObject:
   - component: {fileID: 969092623}
   - component: {fileID: 969092625}
   - component: {fileID: 969092624}
+  - component: {fileID: 969092626}
   m_Layer: 9
   m_Name: Square (39)
   m_TagString: Platform
@@ -16527,7 +16684,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -16594,6 +16751,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &969092626
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969092622}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &985813830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1143391787852307700, guid: 69a97286f3ca5c3468b953516901a98b, type: 3}
@@ -18299,17 +18475,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3163475991023523916, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
   m_PrefabInstance: {fileID: 1113666329}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1113666331 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
-  m_PrefabInstance: {fileID: 1113666329}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92836258c037504468e6b5479fd26795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1123803969
 GameObject:
   m_ObjectHideFlags: 0
@@ -18631,7 +18796,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19290,6 +19455,7 @@ GameObject:
   - component: {fileID: 1167808171}
   - component: {fileID: 1167808173}
   - component: {fileID: 1167808172}
+  - component: {fileID: 1167808174}
   m_Layer: 9
   m_Name: Square (31)
   m_TagString: Platform
@@ -19342,7 +19508,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -19409,6 +19575,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1167808174
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167808170}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1174758087
 GameObject:
   m_ObjectHideFlags: 0
@@ -20067,6 +20252,7 @@ GameObject:
   - component: {fileID: 1201204923}
   - component: {fileID: 1201204925}
   - component: {fileID: 1201204924}
+  - component: {fileID: 1201204926}
   m_Layer: 9
   m_Name: Square (57)
   m_TagString: Platform
@@ -20119,7 +20305,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -20186,6 +20372,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1201204926
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201204922}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1219914928
 GameObject:
   m_ObjectHideFlags: 0
@@ -21341,17 +21546,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3163475991023523916, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
   m_PrefabInstance: {fileID: 1294594202}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1294594204 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
-  m_PrefabInstance: {fileID: 1294594202}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92836258c037504468e6b5479fd26795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1309536239
 GameObject:
   m_ObjectHideFlags: 0
@@ -21493,6 +21687,7 @@ GameObject:
   - component: {fileID: 1311515944}
   - component: {fileID: 1311515943}
   - component: {fileID: 1311515942}
+  - component: {fileID: 1311515945}
   m_Layer: 9
   m_Name: Square (21)
   m_TagString: Platform
@@ -21530,7 +21725,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -21612,6 +21807,25 @@ Transform:
   m_Father: {fileID: 1197437312}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &1311515945
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311515941}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1321921021
 GameObject:
   m_ObjectHideFlags: 0
@@ -21623,6 +21837,7 @@ GameObject:
   - component: {fileID: 1321921022}
   - component: {fileID: 1321921024}
   - component: {fileID: 1321921023}
+  - component: {fileID: 1321921025}
   m_Layer: 9
   m_Name: Square (66)
   m_TagString: Platform
@@ -21675,7 +21890,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -21742,6 +21957,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1321921025
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321921021}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1337918403
 GameObject:
   m_ObjectHideFlags: 0
@@ -21753,6 +21987,7 @@ GameObject:
   - component: {fileID: 1337918404}
   - component: {fileID: 1337918406}
   - component: {fileID: 1337918405}
+  - component: {fileID: 1337918407}
   m_Layer: 9
   m_Name: Square (62)
   m_TagString: Platform
@@ -21805,7 +22040,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -21872,6 +22107,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1337918407
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337918403}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1339514802
 GameObject:
   m_ObjectHideFlags: 0
@@ -21883,6 +22137,7 @@ GameObject:
   - component: {fileID: 1339514805}
   - component: {fileID: 1339514804}
   - component: {fileID: 1339514803}
+  - component: {fileID: 1339514806}
   m_Layer: 9
   m_Name: Square (20)
   m_TagString: Platform
@@ -21920,7 +22175,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -22002,6 +22257,25 @@ Transform:
   m_Father: {fileID: 1197437312}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &1339514806
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339514802}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1342924738
 GameObject:
   m_ObjectHideFlags: 0
@@ -22187,6 +22461,7 @@ GameObject:
   - component: {fileID: 1348888785}
   - component: {fileID: 1348888787}
   - component: {fileID: 1348888786}
+  - component: {fileID: 1348888788}
   m_Layer: 9
   m_Name: Square (55)
   m_TagString: Platform
@@ -22239,7 +22514,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -22306,6 +22581,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1348888788
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348888784}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1349255499
 GameObject:
   m_ObjectHideFlags: 0
@@ -23541,17 +23835,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3163475991023523916, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
   m_PrefabInstance: {fileID: 1411752745}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1411752747 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
-  m_PrefabInstance: {fileID: 1411752745}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92836258c037504468e6b5479fd26795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1443347753
 GameObject:
   m_ObjectHideFlags: 0
@@ -23705,17 +23988,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3163475991023523916, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
   m_PrefabInstance: {fileID: 1443505175}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1443505177 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3421996680656494026, guid: 218a54e743826cc4c886dd89c42a1ed5, type: 3}
-  m_PrefabInstance: {fileID: 1443505175}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92836258c037504468e6b5479fd26795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1452562832
 GameObject:
   m_ObjectHideFlags: 0
@@ -23727,6 +23999,7 @@ GameObject:
   - component: {fileID: 1452562833}
   - component: {fileID: 1452562835}
   - component: {fileID: 1452562834}
+  - component: {fileID: 1452562836}
   m_Layer: 9
   m_Name: Square (50)
   m_TagString: Platform
@@ -23779,7 +24052,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -23846,6 +24119,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1452562836
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452562832}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1453197618
 GameObject:
   m_ObjectHideFlags: 0
@@ -24134,6 +24426,7 @@ GameObject:
   - component: {fileID: 1461585907}
   - component: {fileID: 1461585909}
   - component: {fileID: 1461585908}
+  - component: {fileID: 1461585910}
   m_Layer: 9
   m_Name: Square (25)
   m_TagString: Platform
@@ -24186,7 +24479,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -24253,6 +24546,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1461585910
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461585906}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1472767544
 GameObject:
   m_ObjectHideFlags: 0
@@ -25986,6 +26298,7 @@ GameObject:
   - component: {fileID: 1623959111}
   - component: {fileID: 1623959113}
   - component: {fileID: 1623959112}
+  - component: {fileID: 1623959114}
   m_Layer: 9
   m_Name: Square (28)
   m_TagString: Platform
@@ -26038,7 +26351,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -26105,6 +26418,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1623959114
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623959110}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1624212740
 GameObject:
   m_ObjectHideFlags: 0
@@ -26810,6 +27142,7 @@ GameObject:
   - component: {fileID: 1675312890}
   - component: {fileID: 1675312892}
   - component: {fileID: 1675312891}
+  - component: {fileID: 1675312893}
   m_Layer: 9
   m_Name: Square (59)
   m_TagString: Platform
@@ -26862,7 +27195,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -26929,6 +27262,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1675312893
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675312889}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1684834568
 GameObject:
   m_ObjectHideFlags: 0
@@ -33250,6 +33602,7 @@ GameObject:
   - component: {fileID: 1772958753}
   - component: {fileID: 1772958752}
   - component: {fileID: 1772958751}
+  - component: {fileID: 1772958754}
   m_Layer: 9
   m_Name: Square (19)
   m_TagString: Platform
@@ -33287,7 +33640,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -33369,6 +33722,25 @@ Transform:
   m_Father: {fileID: 1197437312}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &1772958754
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772958750}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1784312513
 GameObject:
   m_ObjectHideFlags: 0
@@ -33510,6 +33882,7 @@ GameObject:
   - component: {fileID: 1785769874}
   - component: {fileID: 1785769876}
   - component: {fileID: 1785769875}
+  - component: {fileID: 1785769877}
   m_Layer: 9
   m_Name: Square (56)
   m_TagString: Platform
@@ -33562,7 +33935,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -33629,6 +34002,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1785769877
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785769873}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1791569254
 GameObject:
   m_ObjectHideFlags: 0
@@ -34816,6 +35208,7 @@ GameObject:
   - component: {fileID: 1879984740}
   - component: {fileID: 1879984742}
   - component: {fileID: 1879984741}
+  - component: {fileID: 1879984743}
   m_Layer: 9
   m_Name: Square (58)
   m_TagString: Platform
@@ -34868,7 +35261,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -34935,6 +35328,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1879984743
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879984739}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1884947893
 GameObject:
   m_ObjectHideFlags: 0
@@ -36008,6 +36420,7 @@ GameObject:
   - component: {fileID: 1950761919}
   - component: {fileID: 1950761921}
   - component: {fileID: 1950761920}
+  - component: {fileID: 1950761922}
   m_Layer: 9
   m_Name: Square (65)
   m_TagString: Platform
@@ -36060,7 +36473,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -36127,6 +36540,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1950761922
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950761918}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1951481655
 GameObject:
   m_ObjectHideFlags: 0
@@ -38162,6 +38594,7 @@ GameObject:
   - component: {fileID: 2138739444}
   - component: {fileID: 2138739446}
   - component: {fileID: 2138739445}
+  - component: {fileID: 2138739447}
   m_Layer: 9
   m_Name: Square (27)
   m_TagString: Platform
@@ -38214,7 +38647,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -38281,6 +38714,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &2138739447
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138739443}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &2145928582
 GameObject:
   m_ObjectHideFlags: 0

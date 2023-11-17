@@ -22,7 +22,7 @@ public class HealthOrb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isInteracting && _isClose && _healthManager.Health < 100f)
+        if (_isClose && _healthManager.Health < 100f)
         {
             _healthManager.Heal(30f);
             _soundManager.HealSound();
@@ -36,7 +36,6 @@ public class HealthOrb : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             _isClose = true;
-            interactText.text = "Press E / Button West to pick up";
         }
     }
 
@@ -46,18 +45,6 @@ public class HealthOrb : MonoBehaviour
         {
             _isClose = false;
             interactText.text = "";
-        }
-    }
-    public void absorb(InputAction.CallbackContext context)
-    {
-        if (context.action.IsPressed())
-        {
-            _isInteracting = true;
-            //print("Interact");
-        }
-        else if (context.canceled)
-        {
-            _isInteracting = false;
         }
     }
 }

@@ -115,141 +115,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        print(KillCount);
-        //////Tutorial NPC
-        if (SceneManager.GetActiveScene().name == "Tutorial")
-        {
-            if (NPC[0].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            else
-            {
-                speed = 8f;
-                jumpForce = 12f;
-                NPCDetect = false;
-            }
-        }
-
-        if (SceneManager.GetActiveScene().name == "Level 1")
-        {
-            if (NPC[0].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            else
-            {
-                speed = 8f;
-                jumpForce = 12f;
-                NPCDetect = false;
-            }
-            if (NPC[1].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            if (NPC[2].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-        }
-        if (SceneManager.GetActiveScene().name == "Level 2")
-        {
-            if (NPC[0].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            else
-            {
-                speed = 8f;
-                jumpForce = 12f;
-                NPCDetect = false;
-            }
-
-            if (NPC[1].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            if (NPC[2].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-        }
-        if (SceneManager.GetActiveScene().name == "Level 3")
-        {
-            if (NPC[0].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            else
-            {
-                speed = 8f;
-                jumpForce = 12f;
-                NPCDetect = false;
-            }
-
-            if (NPC[1].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            if (NPC[2].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-        }
-        if (SceneManager.GetActiveScene().name == "Level 4")
-        {
-            if (NPC[0].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            else
-            {
-                speed = 8f;
-                jumpForce = 12f;
-                NPCDetect = false;
-            }
-
-            if (NPC[1].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            if (NPC[2].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-            if (NPC[3].activeSelf)
-            {
-                speed= 0f;
-                jumpForce = 0f;
-                NPCDetect = true;
-            }
-        }
+      
         // checks kill counts and does something depending on which level you are on
         if (SceneManager.GetActiveScene().name == "Level 1" && KillCount == 14)
         {
@@ -333,7 +199,7 @@ public class Movement : MonoBehaviour
         }
        
         
-        //melée attack
+        //melee attack
         if (MeleeAttackBool && NPCDetect == false)
         {
             if(Time.time >= _nextAttackTime)
@@ -426,8 +292,8 @@ public class Movement : MonoBehaviour
     }
     
     private void Flip()
-    {
-        _isFacingRight = !_isFacingRight;
+    { 
+       _isFacingRight = !_isFacingRight;
        Vector3 localScale = transform.localScale;
        localScale.x *= -1;
        transform.localScale = localScale;
@@ -451,7 +317,7 @@ public class Movement : MonoBehaviour
     {
         if (context.performed && IsGrounded())
         {
-            _isJumping =true;
+            _isJumping = true;
             rb.velocity = new Vector2(rb.velocity.y,jumpForce);
            _soundManager.JumpSound();
             //print("Jump");
@@ -462,9 +328,8 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y * 0.1f);
             //print("Jump");
-            _isJumping = false;
+            //StartCoroutine("StillJumpAbleTime", 1f);
         }
-       
     }
     public void AttackMelee(InputAction.CallbackContext context)
     {
@@ -489,5 +354,10 @@ public class Movement : MonoBehaviour
         enabled = true;
         jumpForce = 12f;
         speed = 8f;
+    }
+    private IEnumerator StillJumpAbleTime(float Time)
+    {
+        yield return new WaitForSeconds(Time);
+        _isJumping = false;
     }
 }

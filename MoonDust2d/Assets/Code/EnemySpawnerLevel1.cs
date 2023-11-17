@@ -57,7 +57,6 @@ public class EnemySpawnerLevel1 : MonoBehaviour
                 StartCoroutine(Spawning7());
                 break;
         }
-
     }
     
 
