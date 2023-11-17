@@ -2371,7 +2371,7 @@ MonoBehaviour:
   - There is a vial below me
   - Good luck, soldier.
   contButton: {fileID: 568828052}
-  wordSpeed: 0.06
+  wordSpeed: 0.02
   playerIsClose: 0
   Arrow: {fileID: 792335691}
   theButton: {fileID: 568828054}
@@ -37199,7 +37199,7 @@ MonoBehaviour:
   - ...
   - 'Goodbye, comrade. '
   contButton: {fileID: 1145830999}
-  wordSpeed: 0.06
+  wordSpeed: 0.02
   playerIsClose: 0
   Arrow: {fileID: 1846823990}
   theButton: {fileID: 1145831001}
@@ -65294,7 +65294,7 @@ MonoBehaviour:
   - There is also a vial to the right.
   - Good luck.
   contButton: {fileID: 2076370414}
-  wordSpeed: 0.06
+  wordSpeed: 0.02
   playerIsClose: 0
   Arrow: {fileID: 1107282166}
   theButton: {fileID: 2076370416}
@@ -67278,7 +67278,7 @@ MonoBehaviour:
   - I hope I might too...
   - War is hell.
   contButton: {fileID: 3437249035687576005}
-  wordSpeed: 0.06
+  wordSpeed: 0.02
   playerIsClose: 0
   Arrow: {fileID: 1016912634}
   theButton: {fileID: 7093686226063190433}

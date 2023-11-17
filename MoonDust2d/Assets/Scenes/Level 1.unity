@@ -34656,7 +34656,7 @@ MonoBehaviour:
   - Good luck and...
   - 'Goodbye, my best friend. '
   contButton: {fileID: 1293366418}
-  wordSpeed: 0.06
+  wordSpeed: 0.02
   playerIsClose: 0
   Arrow: {fileID: 2096735095}
   theButton: {fileID: 1293366420}
@@ -45719,7 +45719,7 @@ MonoBehaviour:
   - Maybe one to the left?...
   - Hope you get it!
   contButton: {fileID: 205829186}
-  wordSpeed: 0.06
+  wordSpeed: 0.02
   playerIsClose: 0
   Arrow: {fileID: 46748893}
   theButton: {fileID: 205829188}
@@ -45752,7 +45752,7 @@ MonoBehaviour:
   - Try not to fall?
   - Good luck!!!
   contButton: {fileID: 4037828391253691527}
-  wordSpeed: 0.06
+  wordSpeed: 0.02
   playerIsClose: 0
   Arrow: {fileID: 152132777}
   theButton: {fileID: 8487990381203186915}

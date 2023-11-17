@@ -1937,6 +1937,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &225938538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8086823948238700292, guid: 22e85532bbf837746b960aa73e8c32de, type: 3}
+  m_PrefabInstance: {fileID: 1646768760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225938539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &225938539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4465444686244747104, guid: 22e85532bbf837746b960aa73e8c32de, type: 3}
+  m_PrefabInstance: {fileID: 1646768760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &225938540 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5868658131798928280, guid: 22e85532bbf837746b960aa73e8c32de, type: 3}
+  m_PrefabInstance: {fileID: 1646768760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &229556601
 GameObject:
   m_ObjectHideFlags: 0
@@ -8727,6 +8754,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -8.05
       objectReference: {fileID: 0}
+    - target: {fileID: 5486840514342439742, guid: 922e4942781d0b9449140262cb8607de, type: 3}
+      propertyPath: orthographic size
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6572790365394538234, guid: 922e4942781d0b9449140262cb8607de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -265.16
@@ -12965,7 +12996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletAmount: 10
+  bulletAmount: 15
   startAngle: 0
   endAngle: 360
   UltimateAttackBool: 0
@@ -15201,17 +15232,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d859f5ebc0ebfe447ad8f342a952971c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
+  dialoguePanel: {fileID: 1646768761}
+  dialogueText: {fileID: 225938540}
   dialogue:
   - You are ready my decendant
   - My duties have been fullfilled and you have learnt how to continue the job.
   - The souls to the peace they deserve!!
-  contButton: {fileID: 0}
-  wordSpeed: 0.06
+  contButton: {fileID: 225938539}
+  wordSpeed: 0.02
   playerIsClose: 0
   Arrow: {fileID: 1069802553}
-  theButton: {fileID: 0}
+  theButton: {fileID: 225938538}
 --- !u!61 &1714619283
 BoxCollider2D:
   m_ObjectHideFlags: 0
