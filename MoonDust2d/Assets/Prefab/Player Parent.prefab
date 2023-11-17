@@ -207,10 +207,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6875915851333304561}
     - target: {fileID: 7728488355526344285, guid: 32c7c7fd622d82e4c8793ca6dad7535b, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 3178835443927869615}
-    - target: {fileID: 7728488355526344285, guid: 32c7c7fd622d82e4c8793ca6dad7535b, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -260,17 +256,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2166235874010798910, guid: 32c7c7fd622d82e4c8793ca6dad7535b, type: 3}
   m_PrefabInstance: {fileID: 540718949418653591}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3178835443927869615 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3142519661541080888, guid: 32c7c7fd622d82e4c8793ca6dad7535b, type: 3}
-  m_PrefabInstance: {fileID: 540718949418653591}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eaab02184085c94e96b4be68a647181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6875915851333304561 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6407826276603189094, guid: 32c7c7fd622d82e4c8793ca6dad7535b, type: 3}
@@ -296,11 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8252469324689559482, guid: 795ecc6853942954aaffa4d50288466b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 192.3
+      value: 2.2600086
       objectReference: {fileID: 0}
     - target: {fileID: 8252469324689559482, guid: 795ecc6853942954aaffa4d50288466b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.4
+      value: 4.329998
       objectReference: {fileID: 0}
     - target: {fileID: 8252469324689559482, guid: 795ecc6853942954aaffa4d50288466b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -344,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8758250287390529723, guid: 795ecc6853942954aaffa4d50288466b, type: 3}
       propertyPath: orthographic size
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -428,6 +413,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1842254864452996265}
+    - target: {fileID: 8760233023965580386, guid: eb3a73a951f0d4e44a07410731c8a40b, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
