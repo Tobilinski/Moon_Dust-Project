@@ -29,7 +29,7 @@ public class SplashScreen : MonoBehaviour
                 Invoke("Splash", 7f);
                 break;
             case "Epilogue":
-                Invoke("BackToMain", 68f);
+                Invoke("BackToMain", 65f);
                 break;
         }
     }
