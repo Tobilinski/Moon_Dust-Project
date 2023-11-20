@@ -5138,8 +5138,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331483290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7536771, y: -0.30762833, z: 0}
-  m_LocalScale: {x: 46.941795, y: 50.44526, z: 1}
+  m_LocalPosition: {x: -2.7536771, y: 2.2886, z: 0}
+  m_LocalScale: {x: 46.941795, y: 45.25444, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 571928056}
@@ -14178,7 +14178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778096621}
   m_LocalRotation: {x: -0, y: -0, z: -0.7656517, w: 0.6432555}
-  m_LocalPosition: {x: -29.456505, y: -158.9, z: -1.1956085}
+  m_LocalPosition: {x: -29.71, y: -132.2, z: -1.1956085}
   m_LocalScale: {x: 1.7606595, y: 1.7574179, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20151,7 +20151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 666686162}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ReturnToMenu
         m_Mode: 1
@@ -25057,7 +25057,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 666686162}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: AudioGlobal
         m_Mode: 1
@@ -26723,7 +26723,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 666686162}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -35198,7 +35198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844442003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.5469, y: -230.1732, z: 0}
+  m_LocalPosition: {x: -9.5469, y: -204.1, z: 0}
   m_LocalScale: {x: 98.40991, y: 4.345724, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39538,7 +39538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6096582139658077493, guid: 3eabf24f244b0214cbe3ef6631e4924b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -225.69
+      value: -199.4
       objectReference: {fileID: 0}
     - target: {fileID: 6096582139658077493, guid: 3eabf24f244b0214cbe3ef6631e4924b, type: 3}
       propertyPath: m_LocalPosition.z
