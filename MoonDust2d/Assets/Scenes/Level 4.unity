@@ -76133,7 +76133,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ultimate Status
+  m_Text: Star Burst Status
 --- !u!222 &6705716526949718480
 CanvasRenderer:
   m_ObjectHideFlags: 0

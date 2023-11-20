@@ -14685,6 +14685,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5691718918017928139, guid: 22e85532bbf837746b960aa73e8c32de, type: 3}
+      propertyPath: m_Text
+      value: Star Burst Status
+      objectReference: {fileID: 0}
     - target: {fileID: 5898455118829844602, guid: 22e85532bbf837746b960aa73e8c32de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
