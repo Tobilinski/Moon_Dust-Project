@@ -27,4 +27,9 @@ public class MainMenu : MonoBehaviour
    {
       SceneManager.LoadScene("1stPoem");
    }
+
+    public void Title()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
