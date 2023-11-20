@@ -238,7 +238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -91.42999, y: 23.040009}
+  m_AnchoredPosition: {x: -91.42999, y: 23.04004}
   m_SizeDelta: {x: 182.85083, y: 46.072296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &186932254
@@ -1241,8 +1241,9 @@ MonoBehaviour:
     design:\nLara Rutherford\n\nLevel design: \nDamian Anderson\n\nAnimator:\nDamian
     Anderson\n\nNarrative design: \nLara Rutherford\n\nUI design:\nLara Rutherford\n\nSound
     design: \nCameron Pillay\n\nPlaytesters:\nThe Rutherford Family\nThe N\xF6lkensmeier
-    Family\nand all our beloved friends.\n\nSpecial thanks to: \nOur supportive family
-    and friends, as well as SAE and our amazing lecturer Andi.\n\n\n\n\n\n\n\n"
+    Family\nCalvin Smilie-Hilton\nRachel Cohen\nSarah Fernandez\nand all our beloved
+    friends.\n\nSpecial thanks to: \nOur supportive family and friends, as well as
+    SAE and our amazing lecturer Andi.\n\n\n\n\n\n\n\n"
 --- !u!222 &1892202770
 CanvasRenderer:
   m_ObjectHideFlags: 0
