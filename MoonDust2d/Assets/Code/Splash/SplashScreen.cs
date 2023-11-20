@@ -28,6 +28,9 @@ public class SplashScreen : MonoBehaviour
             case "2nd Poem":
                 Invoke("Splash", 7f);
                 break;
+            case "Epilogue":
+                Invoke("BackToMain", 68f);
+                break;
         }
     }
 
@@ -36,5 +39,9 @@ public class SplashScreen : MonoBehaviour
     private void Splash()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    private void BackToMain()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
