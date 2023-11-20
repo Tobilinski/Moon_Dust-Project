@@ -79,6 +79,9 @@ public class Movement : MonoBehaviour
     [Space(10)]
     public GameObject[] NPC;
     
+    //Fade Toblack animaiton
+    public Animator FadeToBlack;
+    
     //////////////////////////////////////////////
 
     private Dictionary<string, Vector2> _respawnPositions = new Dictionary<string, Vector2>()
@@ -265,7 +268,7 @@ public class Movement : MonoBehaviour
                 Invoke("SecretDoor", 5f);
                 break;
             case "NextLevel":
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                StartCoroutine("DelayedScene", 2.6f);
                 break;
             case "ElevatorUp":
                 animatorElevator2.SetTrigger("IsUppieUp");
@@ -281,7 +284,12 @@ public class Movement : MonoBehaviour
 
     
 
-
+    private IEnumerator DelayedScene(float Time)
+    {
+        FadeToBlack.SetBool("Fade",true);
+        yield return new WaitForSeconds(Time);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     private void SecretDoor()
     {
         SecretPlat.SetActive(true);
