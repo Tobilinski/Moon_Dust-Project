@@ -120,45 +120,45 @@ public class Movement : MonoBehaviour
     {
       
         // checks kill counts and does something depending on which level you are on
-        if (SceneManager.GetActiveScene().name == "Level 1" && KillCount == 14)
+        if (SceneManager.GetActiveScene().name == "Level 1" && KillCount >= 14)
         {
             killCountDoor();
         }
-        if (SceneManager.GetActiveScene().name == "Level 2" && KillCount == 20)
+        if (SceneManager.GetActiveScene().name == "Level 2" && KillCount >= 20)
         {
             killCountDoor();
         }
        
-        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 11)
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount >= 11)
         {
             killWalls[0].SetActive(false);
         }
-        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 14)
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount >= 14)
         {
             killWalls[1].SetActive(false);
         }
-        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 18)
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount >= 18)
         {
             killWalls[2].SetActive(false);
         }
-        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount == 22)
+        if (SceneManager.GetActiveScene().name == "Level 3" && KillCount >= 22)
         {
             killCountDoor();
         }
         
-        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 3)
+        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount >= 3)
         {
             killWalls[0].SetActive(false);
         }
-        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 7)
+        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount >= 7)
         {
             killWalls[1].SetActive(false);
         }
-        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 11)
+        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount >= 11)
         {
             killWalls[2].SetActive(false);
         }
-        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount == 18)
+        if (SceneManager.GetActiveScene().name == "Level 4" && KillCount >= 18)
         {
             killCountDoor();
             killWalls[3].SetActive(true);
