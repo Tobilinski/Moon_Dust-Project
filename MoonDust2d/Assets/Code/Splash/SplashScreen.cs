@@ -31,6 +31,9 @@ public class SplashScreen : MonoBehaviour
             case "Epilogue":
                 Invoke("Splash", 65f);
                 break;
+            case "Credits":
+               Cursor.visible = true;
+                break;
         }
     }
 
