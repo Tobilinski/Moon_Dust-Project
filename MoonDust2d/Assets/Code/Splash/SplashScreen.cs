@@ -29,7 +29,7 @@ public class SplashScreen : MonoBehaviour
                 Invoke("Splash", 7f);
                 break;
             case "Epilogue":
-                Invoke("BackToMain", 65f);
+                Invoke("Splash", 65f);
                 break;
         }
     }
@@ -39,9 +39,5 @@ public class SplashScreen : MonoBehaviour
     private void Splash()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-    private void BackToMain()
-    {
-        SceneManager.LoadScene("MainMenu");
     }
 }
